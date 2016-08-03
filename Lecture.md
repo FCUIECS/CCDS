@@ -14,7 +14,7 @@
 - 移魂喚影 Structure
 - 剪紙成兵 File I/O
 - 天元突破 C++ Intro
-- 術式精通 Linked List
+- 人形蜈蚣 Linked List
 - 八卦異相 Queue & Stack
 - 森幻千變 Tree
 - 木靈迷路 Graph
@@ -38,7 +38,7 @@
 ## Chapter 8：移魂喚影 Structure
 ## Chapter 9：剪紙成兵 File I/O
 ## Chapter 10：天元突破 C++ Intro
-## Chapter 11：術式精通 Linked List
+## Chapter 11：人形蜈蚣 Linked List
 ## Chapter 12：八卦異相 Queue & Stack
 ## Chapter 13：森幻千變 Tree
 ## Chapter 14：木靈迷路 Graph
