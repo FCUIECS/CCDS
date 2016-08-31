@@ -27,9 +27,7 @@ int main() {
 
 ## 二、Definition 定義
 
-一般來說，Function 必須先宣告，再寫本體。不過若是寫在 main 主程式的上面，就不必再寫宣告。
-
-### 本體寫法：
+### 1.本體寫法：
 
 根據定義，Function 的本體寫法為：
 
@@ -55,7 +53,7 @@ int pow(int base, int power) {
 
 ```
 
-### 宣告方式：
+### 2.宣告方式：
 
 宣告原型為：
 
@@ -81,7 +79,85 @@ int pow(int, int);
 
 ```
 
-### 沒有輸入或輸出
+### 3.位置的藝術
+
+一般來說，Function 必須先宣告，再寫本體。不過若是寫在 main 主程式的上面，就不必再寫宣告。
+
+#### 正確：
+
+```C++
+
+void f1(void) {
+	...
+}
+
+int main(void) {
+	f1();
+}
+
+```
+
+```C++
+
+void f1(int);
+
+int main(void) {
+	f1();
+}
+
+void f1(int n) {
+	...
+}
+
+```
+
+```C++
+
+void f2(void) {
+	...
+}
+
+void f1(int n) {
+	f2();
+}
+
+int main(void) {
+	f1();
+}
+
+```
+
+#### 錯誤：
+
+```C++
+
+int main(void) {
+	f1();
+}
+
+void f1(int n) {
+	...
+}
+
+```
+
+```C++
+
+void f1(int n) {
+	f2();
+}
+
+void f2(void) {
+	...
+}
+
+int main(void) {
+	f1();
+}
+
+```
+
+### 4.沒有輸入或輸出
 
 Function 是可以接受沒有輸入或輸出的，以下這幾種寫法都會成立：
 
