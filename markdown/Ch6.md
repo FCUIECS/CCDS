@@ -12,7 +12,7 @@
 ```C++
 
 int main() {
-	printf("hello world!");
+	printf("hello world!\n");
 	return 0;
 }
 
@@ -220,9 +220,9 @@ void swap(int x, int y) {
 
 int main() {
 	int x = 5, y = 10;
-	printf("Before : x = %d, y = %d", x, y );
+	printf("Before : x = %d, y = %d\n", x, y );
 	swap(x, y);
-	printf("After : x = %d, y = %d", x, y );
+	printf("After : x = %d, y = %d\n", x, y );
 	return 0;
 }
 
