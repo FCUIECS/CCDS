@@ -50,5 +50,14 @@ Visual Studio 是 Microsoft 開發的一套非常強大的IDE。這邊的安裝�
 ![vs11-visual-studio-open.png](../img/Ch0/vs11-visual-studio-open.png)
 
 ### 設定
+基本上這邊教大家調字體大小，其他的可以自行摸索
+1. 點選工具列「工具」/「選項」  
+![vs12-visual-studio-options-1.png](../img/Ch0/vs12-visual-studio-options-1.png)
+
+2. 左側選到「環境」/「字型與色彩」  
+   將「大小」調至「14」(這邊可以依個人喜好調整)  
+   按下「確定」
+![vs13-visual-studio-options-2.png](../img/Ch0/vs13-visual-studio-options-2.png)
+
 ### 建立第一個專案
 ### 其他
