@@ -43,10 +43,10 @@ Visual Studio 是 Microsoft 開發的一套非常強大的IDE。這邊的安裝�
 9. 安裝完成，點選「啟動」  
 ![vs09-visual-studio-install-complete.png](../img/Ch0/vs09-visual-studio-install-complete.png)
 
-10. 點選「登入」，登入自己的 Microsoft 帳號  
+10. 點選「登入」，登入自己的 Microsoft 帳號(第一次開啟會需要)  
 ![vs10-visual-studio-config-1.png](../img/Ch0/vs10-visual-studio-config-1.png)
 
-11. 開啟安裝完成的 Visual Studio Community 2015  
+11. 登入完成後，會自動開啟 Visual Studio Community 2015  
 ![vs11-visual-studio-open.png](../img/Ch0/vs11-visual-studio-open.png)
 
 ### 設定
