@@ -22,7 +22,7 @@ Visual Studio 是 Microsoft 開發的一套非常強大的IDE。這邊的安裝�
 2. 執行安裝程式  
 ![vs02-visual-studio-install.png](../img/Ch0/vs02-visual-studio-install.png)
 
-3. 跳出安全性警告，確定發行者名稱是否相同，點選「執行」  
+3. 跳出安全性警告，確定發行者名稱是否跟圖片相同，點選「執行」  
 ![vs03-visual-studio-install-security-warning.png](../img/Ch0/vs03-visual-studio-install-security-warning.png)
 
 4. 安裝程式準備中...  
@@ -46,7 +46,7 @@ Visual Studio 是 Microsoft 開發的一套非常強大的IDE。這邊的安裝�
 10. 點選「登入」，登入自己的 Microsoft 帳號  
 ![vs10-visual-studio-config-1.png](../img/Ch0/vs10-visual-studio-config-1.png)
 
-11. 開啟完成的 Visual Studio Community 2015  
+11. 開啟安裝完成的 Visual Studio Community 2015  
 ![vs11-visual-studio-open.png](../img/Ch0/vs11-visual-studio-open.png)
 
 ### 設定
