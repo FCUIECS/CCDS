@@ -1,6 +1,6 @@
 # Summary
 
-* [開卷](Lecture.md)
+* [開卷](Readme.md)
 * [魔工鑄器 Environment](Ch0/Intro.md)
   * Dev*C++
   * Code::Blocks
