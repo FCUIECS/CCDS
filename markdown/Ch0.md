@@ -1,63 +1,68 @@
-# Chapter 0：魔工鑄器 Environment
-
-## Dev-C++
-
-## Code::Blocks
-
-## CLion
-
-## Visual Studio
-
-Visual Studio 是 Microsoft 開發的一套非常強大的IDE。這邊的安裝教學使用Visual Studio Community 2015。  
-
-備註：  
-1. 安裝會需要大量的網路與硬碟空間，視選擇的套件而定。
-2. 會需要一個 Microsoft 的帳號啟動(免費的)
-
-### 安裝
-1. 先到 https://www.visualstudio.com/zh-tw/products/visual-studio-community-vs.aspx  
-   點選「下載 Community 2015」  
-![vs01-visual-studio-community-website.png](../img/Ch0/vs01-visual-studio-community-website.png)
-
-2. 執行安裝程式  
-![vs02-visual-studio-install.png](../img/Ch0/vs02-visual-studio-install.png)
-
-3. 跳出安全性警告，確定發行者名稱是否跟圖片相同，點選「執行」  
-![vs03-visual-studio-install-security-warning.png](../img/Ch0/vs03-visual-studio-install-security-warning.png)
-
-4. 安裝程式準備中...  
-![vs04-visual-studio-install-prepare.png](../img/Ch0/vs04-visual-studio-install-prepare.png)
-
-5. 「選擇安裝類型」為「自訂」，點「下一步」  
-![vs05-visual-studio-install-config-1.png](../img/Ch0/vs05-visual-studio-install-config-1.png)
-
-6. 勾選「 Visual C++」，點選「下一步」  
-![vs06-visual-studio-install-config-2.png](../img/Ch0/vs06-visual-studio-install-config-2.png)
-
-7. 點選「安裝」  
-![vs07-visual-studio-install-config-3.png](../img/Ch0/vs07-visual-studio-install-config-3.png)
-
-8. 安裝中......(要一段時間，可以去喝個咖啡)  
-![vs08-visual-studio-installing.png](../img/Ch0/vs08-visual-studio-installing.png)
-
-9. 安裝完成，點選「啟動」  
-![vs09-visual-studio-install-complete.png](../img/Ch0/vs09-visual-studio-install-complete.png)
-
-10. 點選「登入」，登入自己的 Microsoft 帳號(第一次開啟會需要)  
-![vs10-visual-studio-config-1.png](../img/Ch0/vs10-visual-studio-config-1.png)
-
-11. 登入完成後，會自動開啟 Visual Studio Community 2015  
-![vs11-visual-studio-open.png](../img/Ch0/vs11-visual-studio-open.png)
-
-### 設定
-基本上這邊教大家調字體大小，其他的可以自行摸索
-1. 點選工具列「工具」/「選項」  
-![vs12-visual-studio-options-1.png](../img/Ch0/vs12-visual-studio-options-1.png)
-
-2. 左側選到「環境」/「字型與色彩」  
-   將「大小」調至「14」(這邊可以依個人喜好調整)  
-   按下「確定」
-![vs13-visual-studio-options-2.png](../img/Ch0/vs13-visual-studio-options-2.png)
-
-### 建立第一個專案
-### 其他
+- [開卷]()
+- [魔工鑄器 Environment](Ch0.md)
+  - Dev-C++
+  - Code::Blocks
+  - CLion
+  - Visual Studio
+- [鑑往知來 C Intro](Ch1.md)
+  - 背景
+  - 低中高階語言
+  - 特性
+  - 起手式
+- [五型殺氣 Basic I/O](Ch2.md)
+  - 輸入/輸出(stdio)
+  - 基本五型(void, int, float, double, char)
+  - 伸縮自如的型態(unsigned, long, short)
+- [扮裝行列 Operation](Ch3.md)
+  - 一般運算式
+  - 位元運算式
+  - 布林運算式
+  - 判斷式
+- [循環演算 Loop & Array](Ch4.md)
+  - 迴圈簡介
+  - 陣列簡介
+- [情報強化 String](Ch5.md)
+  - 字串簡介
+  - 字串處理
+  - 大數運算
+- [三千世界 Function](Ch6.md)
+  - 函式簡介
+  - 參數傳遞(Call by value)
+  - 遞迴
+- [鬼門遁甲 Pointer](Ch7.md)
+  - 指標簡介
+  - 參數傳遞(Call by address)
+  - 動態記憶體操作(malloc/realloc/calloc/free)
+- [七夜怪談 Structure](Ch8.md)
+  - 結構簡介
+  - 結構指標
+- [剪紙成兵 File I/O](Ch9.md)
+  - 檔案結構
+  - 檔案輸入輸出
+  - 檔案處理
+- [天元突破 C++ Intro](Ch10.md)
+  - C++簡介
+  - 輸入&輸出
+  - 第六型態(bool)
+  - 字串(string)
+  - 三元運算子
+  - struct & class
+  - new & delete
+- [人形蜈蚣 Linked List](Ch11.md)
+  - 單向鏈結串列
+  - 雙向鏈結串列
+  - 循環鏈結串列
+- [陰陽一氣 Queue & Stack](Ch12.md)
+  - 佇列簡介
+  - 堆疊簡介
+  - 用Linked List實作
+- [木葉旋風 Tree](Ch13.md)
+  - 各種樹簡介
+  - 樹的走訪
+  - 前序/中序/後序轉換式
+- [木靈迷路 Graph](Ch14.md)
+  - 各種圖簡介
+  - Kruskal
+  - Prime
+  - Dijkstra
+- 總結
