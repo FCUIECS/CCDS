@@ -1,6 +1,9 @@
 # Visual Studio
 
-Visual Studio 是 Microsoft 開發的一套非常強大的IDE。這邊的安裝教學使用Visual Studio Community 2015。  
+Visual Studio 是 Microsoft 開發的一套非常強大的IDE。  
+這邊的安裝教學使用Visual Studio Community 2015。  
+
+> **適用平台：Windows Only (Windows 7 SP1或以上)**
 
 備註：  
 1. 安裝會需要大量的網路與硬碟空間，視選擇的套件而定。
