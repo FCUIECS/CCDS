@@ -1,66 +1,10 @@
-#Chapter 10 天元突破 C++ Intro
+# Chapter 10 天元突破 C++ Intro
+本章節將簡易用C++複習基本程式邏輯，並教導C和C++的不同之處，以便接下來資料結構相關課程的銜接，因為並非是物件導向課程，故本章節並不會注重教導物件導向的觀念。
 
-本章節將教導C和C++的不同之處，以便接下來資料結構相關課程的銜接，因為並非是物件導向課程，故本章節並不會教導物件導向的觀念。
-
-##一、起手式
-
-就如同C語言中會有的 `#include <stdio.h> …　return 0;` ，等等必定會寫的內容一樣，以下是C++的基礎架構：
-
-```
-
-	#include <iostream>
-	int main(){
-		std::cout << "Hello World!" << std::endl;
-		return 0;
-	}
-```
-
-以上為一個最基礎的`Hello World!`程式 從上述程式可以看到其實與C的架構相似，不同的只有`#include <iostream>`和`std::cout << ...`的部分。
-
-在C++中，輸出字元會使用`std::cout`而非`printf()`，他能夠判斷型態內容自行輸出，而`std::endl`的效用為換行，也許一開始在`printf()`和`std::cout`的用法上會有一些不適應，不過多練習之後很快就能習慣的。所以請先練習以下題目：
-
-###練習10-1
-請使用`std::cout`輸出自己的生日、姓名及電話如以下範例
-
-	1983/01/21
-	西嘉嘉
-	0987666666
-<br>
-如果一直打`std::cout`是不是會感到厭煩？如果會，那可以參考下面的寫法。
-
-```
-
-	#include <iostream>
-	using namespace std;
-
-	int main(){
-		cout << "Hello World!" << endl;
-		return 0;
-	}
-```
-
-
-在`#include <iostream>`後寫上`using namespace std;`，之後你寫上的`cout`和`endl`就不必再加上`std::`。
-
-為什麼會這樣呢？你可以想像在iostream中有許多個`cout`當你只有寫上`cout`時，編譯器沒有辦法判斷是哪一個`cout`，所以你必須寫`std::cout`，編譯器才能知道你要使用的為`std`這個namespace底下的`cout`，所以在最前面加上`using namespace std;`，編譯器就會默認你的`cout`為`std`下的`cout`。
-
-簡單來說，加上`using namespace std;`就只要寫`cout`而非`std::cout`，會方便許多。
-
-
-##二、型態與字串
 
 型態為資料的儲存方式，有整數、小數和字元等等，我們直接以表格的方式觀看：
 
-**型態類型**	**保留字**	**佔用空間** <br>
-字元	    char	1 byte <br>
-寬字元	wchar_t	2 bytes <br>
-整數	    short	2 bytes <br>
-整數	    int	    4 bytes <br>
-整數	    long	4 bytes <br>
-浮點數	float	4 bytes <br>
-浮點數	double	8 bytes <br>
-浮點數	long double	12 or 16 bytes <br>
-布林	    bool	1 byte <br>
+
 
 其中值得一提的是**bool**這個資料型態，在C語言中，我們可能會宣告一個**int**作為條件判斷的變數，但我們從表格中可以看到兩者佔用空間是有差的，而程式碼管理上**bool**作為條件判斷的變數也會比其他型態更為清楚明瞭。
 
@@ -96,7 +40,6 @@ int main(){
 #include <iostream>
 #include <string>
 using namespace std;
-
 int main(){
 	string str1("I am string no.1");
 	cout << "The string \"" << str1 << "\"size is " << str1.size() << endl;
