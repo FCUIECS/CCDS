@@ -10,5 +10,4 @@
 ## 子章節
 * [Dev-C++](Ch0/devcpp.md)
 * [Code::Blocks](Ch0/codeblocks.md)
-* [CLion](Ch0/clion.md)
 * [Visual Studio](Ch0/visualstudio.md)

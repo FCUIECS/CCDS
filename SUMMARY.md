@@ -4,7 +4,6 @@
 * [魔工鑄器 Environment](Ch0/Intro.md)
   * [Dev-C++](Ch0/devcpp.md)
   * [Code::Blocks](Ch0/codeblocks.md)
-  * [CLion](Ch0/clion.md)
   * [Visual Studio](Ch0/visualstudio.md)
 * [鑑往知來 C Intro](Ch1/Intro.md)
   * [背景]()
