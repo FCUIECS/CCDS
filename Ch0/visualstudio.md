@@ -34,7 +34,6 @@ Visual Studio 是 Microsoft 開發的一套非常強大的IDE。
 
 8. 安裝中......(要一段時間，可以去喝個咖啡)  
 ![vs08-visual-studio-installing.png](../img/Ch0/vs08-visual-studio-installing.png)
-
 9. 安裝完成，點選「啟動」  
 ![vs09-visual-studio-install-complete.png](../img/Ch0/vs09-visual-studio-install-complete.png)
 
@@ -56,7 +55,3 @@ Visual Studio 是 Microsoft 開發的一套非常強大的IDE。
 
 ## 建立第一個專案
 ## 其他
-寫程式有各式各樣的方法，只要程式寫得出來都是好方法，<br>
-<b>阿!抄作業的方法在這邊不適用，被發現直接當掉，掰~<b>
-就算你用記事本寫都沒問題，<br>
-助教群，有一半是記事本(純文字編輯器)派的<br>
