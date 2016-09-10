@@ -87,3 +87,84 @@ int main(){
 ```
 ### 練習10-4
 請參考範例10-4，讓使用者輸入小數並該小數印出。
+
+## 複習：if-else與switch-case
+我們的程式經常會辨別使用者的輸入而產生不同的輸出，現在我們將練習兩種流程控制，if-else與switch-case。現在我們讓使用者輸入他的身高，若大於180則印出basketball，若大於165則印出baseball，若低於165則印出table tennis，請參考範例10-5：
+### 範例10-5
+```c++
+#include <iostream>
+using namespace std;
+int main(){
+	int height;
+	cout << "Please input your height";
+	cin >> height;
+	if(height > 180){
+		cout << "baskeball" << endl;
+	}else if(height > 165){
+		cout << "baseball" << endl;
+	}else{
+		cout << "table tennis" << endl;
+	}
+}
+```
+### 練習10-5
+請參考範例10-5畫出其程式流程
+
+除了if-else之外，若同時有多個分支需要判斷，我們可以使用switch-case，請參考範例10-6：
+### 範例10-6
+```c++
+#include <iostream>
+using namespace std;
+int main(){
+	char num;
+	cout << "Please input num";
+	cin >> num;
+	switch (num) {
+		case '1':
+			cout << "case 1";
+			break;
+		case '2':
+			cout << "case 2";
+			break;
+		case '3':
+			cout << "case 3";
+			break;
+		default:
+			cout << "is not 1,2,3"
+			break;
+	}
+}
+```
+要注意的是，每個case後要放上`break;`，沒加會發生什麼事各位同學可以自行嘗試。而`case '1'`中`1`要加上單引號是因為表示為char型態，若要使其表示為整數型態則不需要加上單引號。
+### 練習10-6
+請修改範例10-6，將num改為整數型態並使程式正確執行。
+
+### 總練習
+請模擬一次性販賣機，讓使用者輸入投幣數量，並選擇a~d四種產品，若能夠購買則顯示購買成功，若錢不夠則顯示購買失敗，販賣機商品及價錢請參考下表。
+
+| **商品代號** | **價錢** |
+|:-----:|:----:|
+|a|10|
+|b|50|
+|c|100|
+|d|87|
+
+例子1
+
+	請投入金額：50
+	a:10
+	b:50
+	c:100
+	d:87
+	請輸入商品代號：a
+	商品a購買成功
+
+例子2
+
+	請投入金額：50
+	a:10
+	b:50
+	c:100
+	d:87
+	請輸入商品代號：d
+	商品d購買失敗
