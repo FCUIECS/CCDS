@@ -25,7 +25,7 @@ int main()
 * stdio = standard input and output
 * 標準輸入輸出
 
-#＃ 主程式 Main
+## 主程式 Main
 程式開始的地方
 ```c++
 int main(){
