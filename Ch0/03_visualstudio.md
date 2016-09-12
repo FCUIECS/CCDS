@@ -83,16 +83,16 @@ Visual Studio 是 Microsoft 開發的一套非常強大的IDE
 
 7. 打上下面示範用程式碼  
 
-{%ace edit=false, lang='c_cpp', theme='monokai'%}
-#include <stdio.h>
+  {%ace edit=false, lang='c_cpp', theme='monokai'%}
+  #include <stdio.h>
 
-int main() {
-    printf("Hello, world");
-    return 0;
-}
-{%endace%}
+  int main() {
+      printf("Hello, world");
+      return 0;
+  }
+  {%endace%}
 
-![vs20-visual-studio-hello-world-1.png](img/vs20-visual-studio-hello-world-1.png)
+  ![vs20-visual-studio-hello-world-1.png](img/vs20-visual-studio-hello-world-1.png)
 
 8. 按下「本機 Windows 偵測工具」  
    點選「是」
