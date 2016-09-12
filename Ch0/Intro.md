@@ -8,12 +8,12 @@
 - 學會基本IDE操作。
 
 ## 子章節
-* [Dev-C++](Ch0/devcpp.md)
-* [Code::Blocks](Ch0/codeblocks.md)
-* [Visual Studio](Ch0/visualstudio.md)
+* [Dev-C++](Ch0/01_devcpp.md)
+* [Code::Blocks](Ch0/02_codeblocks.md)
+* [Visual Studio](Ch0/03_visualstudio.md)
 
 ## 助教群的話
-寫程式有各式各樣的方法，只要程式寫得出來都是好方法，  
+寫程式有各式各樣的方法，只要程式寫得出來都是好方法。  
 **阿!抄作業的方法在這邊不適用，被發現直接當掉，掰~**
-就算你用記事本寫都沒問題，  
-助教群，有一半是記事本(純文字編輯器)派的
+就算你用記事本寫都沒問題。  
+助教群，有一半是記事本(純文字編輯器)派的。
