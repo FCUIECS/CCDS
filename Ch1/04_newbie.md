@@ -7,8 +7,6 @@
 (寫到大四還在寫的Hello, world!  
 
 {%ace edit=false, lang='c_cpp'%}
-{%endace}
-```c++
 #include <stdio.h>
 
 int main()
@@ -16,7 +14,7 @@ int main()
    printf("Hello world!\n");
    return 0;
 }
-```
+{%endace%}
 
 ## 標頭檔 Header
 告訴編譯器(compiler)會用到哪些函式庫
