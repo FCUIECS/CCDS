@@ -6,7 +6,7 @@
 將指定的文字輸出到主控台上  
 (寫到大四還在寫的Hello, world!  
 
-{%ace edit=false, lang='c_cpp'%}
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <stdio.h>
 
 int main()
