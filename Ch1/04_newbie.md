@@ -72,6 +72,7 @@ return 0;
 */
 ```
 ## 縮排 Indent
+![img/indent.jpg](img/indent.jpg)
 ```c++
 #include <stdio.h>
 int main(){
@@ -79,6 +80,7 @@ printf("Hello world!\n");
 return 0;
 }
 ```
+比起上面來講，
 ```c++
 #include <stdio.h>
 
@@ -88,16 +90,16 @@ int main()
    return 0;
 }
 ```
-看起來會比較輕鬆愜意
+這個看起來會比較輕鬆愜意。
 
 ## 編譯 Compile
 * 還記得一開始講的程式編譯過程嘛
-  * 原始程式 --> 經由編譯器 --> 變成目的檔 --> 經由連結器 --> 變成執行檔  
-  * SOURCE.C --> COMPILER --> SOURCE.OBJ --> LINKER --> SOURCE.EXE  
+  * 原始程式 --> 經由編譯器 --> 目的檔 --> 經由連結器 --> 執行檔  
+  * `source.c` --> COMPILER --> `source.o` --> LINKER --> `source.exe`  
 * 編譯、執行方式
   * gcc source.c -o run.exe
   * ./run.exe
-* 這時候就要說到編輯器的方便了
+* 這時候就要說到 IDE 的方便了
   * F9 (Build and run)
   * 只需要按一下
 
