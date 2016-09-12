@@ -96,7 +96,7 @@ int main(){
 using namespace std;
 int main(){
 	int height;
-	cout << "Please input your height";
+	cout << "Please input your height:";
 	cin >> height;
 	if(height > 180){
 		cout << "baskeball" << endl;
@@ -117,14 +117,14 @@ int main(){
 using namespace std;
 int main(){
 	char num;
-	cout << "Please input num";
+	cout << "Please input num:";
 	cin >> num;
 	switch (num) {
 		case '1':
-			cout << "case 1";
+			cout << "case 1" << endl;
 			break;
 		case '2':
-			cout << "case 2";
+			cout << "case 2" << endl;
 			break;
 		case '3':
 			cout << "case 3";
