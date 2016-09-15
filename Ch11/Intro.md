@@ -109,6 +109,10 @@ void insert_node(DATA* node1, DATA* node2)
 用 malloc 要來的記憶體空間會放在 heap 而不是 stack，所以不會隨著 function 結束釋放，
 必須要用 free() 釋放掉，否則會造成 memory leak。
 
+刪除時的運作方式：  
+
+![linked-list-del.png](img/linked-list-del.png)
+
 ```C++
 //刪除 n 的下一個 node 
 void remove_node(DATA* n)
