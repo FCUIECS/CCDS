@@ -24,6 +24,7 @@ int main()
 
 ## 標頭檔 Header
 告訴編譯器(compiler)會用到哪些函式庫
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include<stdio.h>
 {%endace%}
@@ -34,11 +35,13 @@ int main()
 
 ## 主程式 Main
 程式開始的地方
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 int main(){
     ...
 }
 {%endace%}
+
 寫了一大堆程式碼，總是要從一個地方開始執行  
 由main開始  
 
@@ -48,6 +51,7 @@ int；執行完畢後回傳整數型態(將在**五型殺氣 Basic I/O**詳細�
 { }；程式內容(裡面就是這支程式要做的事情)  
 
 ## 程式主體
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 printf("Hello world!\n");
   //印出 Hello world!
@@ -79,8 +83,10 @@ return 0;
     我是多行註解2
 */
 {%endace%}
+
 ## 縮排 Indent
 ![img/indent.jpg](img/indent.jpg)
+  
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <stdio.h>
 int main(){
@@ -88,7 +94,9 @@ printf("Hello world!\n");
 return 0;
 }
 {%endace%}
-比起上面來講，
+  
+比起上面來講，  
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <stdio.h>
 
@@ -98,6 +106,7 @@ int main()
    return 0;
 }
 {%endace%}
+  g
 這個看起來會比較輕鬆愜意。
 
 ## 編譯 Compile
