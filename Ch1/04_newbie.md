@@ -24,20 +24,21 @@ int main()
 
 ## 標頭檔 Header
 告訴編譯器(compiler)會用到哪些函式庫
-```
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include<stdio.h>
-```
+{%endace%}
+
 告訴編譯器這個程式會用到 stdio.h這個表頭檔(Header file)中的函示定義  
 * stdio = standard input and output
 * 標準輸入輸出
 
 ## 主程式 Main
 程式開始的地方
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 int main(){
     ...
 }
-```
+{%endace%}
 寫了一大堆程式碼，總是要從一個地方開始執行  
 由main開始  
 
@@ -47,13 +48,13 @@ int；執行完畢後回傳整數型態(將在**五型殺氣 Basic I/O**詳細�
 { }；程式內容(裡面就是這支程式要做的事情)  
 
 ## 程式主體
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 printf("Hello world!\n");
   //印出 Hello world!
   //"\n"代表換行符號
 return 0;
   //程式成功結束
-```
+{%endace%}
 `printf`；印出後面參數內容(誇號內之內容，可用雙引號包含一段文字)，為C語言提供的標準輸出函式  
 `return`；回傳值，程式結束後會回傳一個數值，通常 0 表示正常結束(將在**三千世界 Function**詳細介紹)   
 `\n`；換行符號，程式不會自動換行，如果沒加，下段文字會接在後面繼續寫  
@@ -67,27 +68,27 @@ return 0;
 
 註解很重要，英文更重要，不懂英文，就看不懂註解，不懂註解就會處於一種尷尬的狀態。   
 
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 //我是單行註解
-```
+{%endace%}
 
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 /*
     我是多行註解1
     我是多行註解2
 */
-```
+{%endace%}
 ## 縮排 Indent
 ![img/indent.jpg](img/indent.jpg)
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <stdio.h>
 int main(){
 printf("Hello world!\n");
 return 0;
 }
-```
+{%endace%}
 比起上面來講，
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <stdio.h>
 
 int main()
@@ -95,7 +96,7 @@ int main()
    printf("Hello world!\n");
    return 0;
 }
-```
+{%endace%}
 這個看起來會比較輕鬆愜意。
 
 ## 編譯 Compile
