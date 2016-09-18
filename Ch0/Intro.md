@@ -8,9 +8,9 @@
 - 學會基本IDE操作。
 
 ## 子章節
-* [Dev-C++](Ch0/01_devcpp.md)
-* [Code::Blocks](Ch0/02_codeblocks.md)
-* [Visual Studio](Ch0/03_visualstudio.md)
+* [Dev-C++](01_devcpp.md)
+* [Code::Blocks](02_codeblocks.md)
+* [Visual Studio](03_visualstudio.md)
 
 ## 助教群的話
 寫程式有各式各樣的方法，只要程式寫得出來都是好方法。  

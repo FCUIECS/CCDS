@@ -9,11 +9,11 @@
 * 用C語言撰寫第一支程式
 
 ## 子章節
-* [C語言背景](Ch1/01_history.md)
-* [低中高階語言](Ch1/02_language_diff.md)
-* [C語言特性](Ch1/03_spec.md)
-* [起手式](Ch1/04_newbie.md)
-* [練習](Ch1/05_practice.md)
+* [C語言背景](01_history.md)
+* [低中高階語言](02_language_diff.md)
+* [C語言特性](03_spec.md)
+* [起手式](04_newbie.md)
+* [練習](05_practice.md)
 
 ## 助教群的話
 如果不會C，也沒關係，我在上大學之前也不知道什麼是C  
