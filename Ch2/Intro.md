@@ -10,7 +10,7 @@
 
 ## 子章節
 * [標準輸出](Ch2/01_stdout.md)
-* [基本五型(void, int, float, double, char)](Ch2/02_type.md)
-* [伸縮自如的型態]()
+* [基本五型](Ch2/02_type.md)
+* [伸縮自如的型態](Ch2/03_changable.md)
 * [標準輸入]()
 * [練習]()
