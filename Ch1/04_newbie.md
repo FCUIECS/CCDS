@@ -99,14 +99,14 @@ return 0;
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <stdio.h>
-
+    
 int main()
 {
    printf("Hello world!\n");
    return 0;
 }
-{%endace%}
-  g
+{%endace%}  
+  
 這個看起來會比較輕鬆愜意。
 
 ## 編譯 Compile
