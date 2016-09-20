@@ -45,6 +45,7 @@ string有很多功能可以使用，但本課程為教學資料結構，所以�
 
 ## 複習：副程式(function)
 常常我們會持續地做同一事情，但這件事情由多行程式碼組成，這時候我們就需要用到副程式的概念，請參考下列兩種程式碼：
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 #include <math.h>

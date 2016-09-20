@@ -6,6 +6,7 @@
 在`bool`中提供兩個值，分別為`true`和`false`，兩者皆為c++的保留字，所以不能任意更改大小寫，請執行以下程式。
 
 ### 範例10-7
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 using namespace std;
@@ -23,6 +24,7 @@ int main(){
 	return 0;
 }
 {%endace%}
+
 ### 練習10-7
 請使用前次範例並將`flag`的值設為`false`。
 
@@ -39,6 +41,7 @@ int main(){
 
 假設我們想讓使用者持續輸入數字，並使這些數字相加，當總和大於100時結束，請參考範例10-8：
 ### 範例 10-8
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 using namespace std;
@@ -54,6 +57,7 @@ int main(){
 	return 0;
 }
 {%endace%}
+
 ### 練習10-8
 請參考範例10-8，改為讓使用者輸入5次數字後印出數字總和並結束程式。
 
@@ -69,6 +73,7 @@ int main(){
 範例10-9為顯示2的九九乘法表
 
 ### 範例10-9
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 using namespace std;
@@ -80,6 +85,7 @@ int main(){
 	return 0;
 }
 {%endace%}
+
 ### 練習10-9
 請利用雙層迴圈(for)印出完整的九九乘法表，並排版。
 
@@ -87,7 +93,7 @@ int main(){
 
 ### 總練習
 請更改上一節的總練習，並閱讀以下題目：
-請模擬市售販賣機，讓使用者輸入投幣數量，並選擇a~d四種產品，若能夠購買則顯示購買成功並顯示退幣，若錢不夠則顯示購買失敗，如果輸入錯誤的代號則請使用者重新輸入，販賣機商品及價錢請參考下表。
+請模擬販賣機，讓使用者輸入投幣數量，並選擇a~d四種產品，若能夠購買則顯示購買成功並顯示退幣，若錢不夠則顯示購買失敗，如果輸入錯誤的代號則請使用者重新輸入，販賣機商品及價錢請參考下表。
 
 | **商品代號** | **價錢** |
 |:-----:|:----:|
