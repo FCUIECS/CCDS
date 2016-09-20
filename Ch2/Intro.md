@@ -1,6 +1,6 @@
 # Chapter 2：五型殺氣 Basic I/O
 
-> 揉合五型，共建基礎大業，曰：「五型殺氣」。
+> 基礎五型，奠定C語言基礎架構。
 
 ## 教學目標
 * 學會一般程式基礎架構
@@ -9,7 +9,8 @@
 * 能用C語言撰寫出帶有輸入輸出及各種型態的程式。
 
 ## 子章節
-* [輸入/輸出(stdio)](Ch2/01_stdio.md)
-* [基本五型(void, int, float, double, char)](Ch2/02_type.md)
-* [伸縮自如的型態(unsigned, long, short)](Ch2/03_changable.md)
-* [練習](Ch2/04_practice.md)
+* [標準輸出](Ch2/01_stdout.md)
+* [基本五型](Ch2/02_type.md)
+* [伸縮自如的型態](Ch2/03_changable.md)
+* [標準輸入]()
+* [練習]()

@@ -16,22 +16,32 @@ int main()
 }
 {%endace%}
 
+##語法 Syntax
+就像英文有文法、中文也有文法一樣，<br>
+每個程式語言也有它自己的語法，<br>
+有嚴謹的，也有較寬鬆的，<br>
+之後會一一介紹。
+
 ## 標頭檔 Header
 告訴編譯器(compiler)會用到哪些函式庫
-```
+
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include<stdio.h>
-```
+{%endace%}
+
 告訴編譯器這個程式會用到 stdio.h這個表頭檔(Header file)中的函示定義  
 * stdio = standard input and output
 * 標準輸入輸出
 
 ## 主程式 Main
 程式開始的地方
-```c++
+
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 int main(){
     ...
 }
-```
+{%endace%}
+
 寫了一大堆程式碼，總是要從一個地方開始執行  
 由main開始  
 
@@ -41,16 +51,18 @@ int；執行完畢後回傳整數型態(將在**五型殺氣 Basic I/O**詳細�
 { }；程式內容(裡面就是這支程式要做的事情)  
 
 ## 程式主體
-```c++
+
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 printf("Hello world!\n");
   //印出 Hello world!
   //"\n"代表換行符號
 return 0;
   //程式成功結束
-```
-`printf`；印出後面參數內容(誇號內之內容，可用雙引號包含一段文字)，為C語言提供的標準輸出函式  
-`return`；回傳值，程式結束後會回傳一個數值，通常 0 表示正常結束(將在**三千世界 Function**詳細介紹)   
-`\n`；換行符號，程式不會自動換行，如果沒加，下段文字會接在後面繼續寫  
+{%endace%}
+
+`printf` ：印出後面參數內容(誇號內之內容，可用雙引號包含一段文字)，為C語言提供的標準輸出函式  
+`return` ：回傳值，程式結束後會回傳一個數值，通常 0 表示正常結束(將在**三千世界 Function**詳細介紹)   
+`\n` ：換行符號，程式不會自動換行，如果沒加，下段文字會接在後面繼續寫  
 
 ## 註解 Comment
 * 有點像是備忘錄，對自己寫的程式碼來點解釋
@@ -61,35 +73,40 @@ return 0;
 
 註解很重要，英文更重要，不懂英文，就看不懂註解，不懂註解就會處於一種尷尬的狀態。   
 
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 //我是單行註解
-```
+{%endace%}
 
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 /*
     我是多行註解1
     我是多行註解2
 */
-```
+{%endace%}
+
 ## 縮排 Indent
 ![img/indent.jpg](img/indent.jpg)
-```c++
+  
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <stdio.h>
 int main(){
 printf("Hello world!\n");
 return 0;
 }
-```
-比起上面來講，
-```c++
-#include <stdio.h>
+{%endace%}
+  
+比起上面來講，  
 
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
+#include <stdio.h>
+    
 int main()
 {
    printf("Hello world!\n");
    return 0;
 }
-```
+{%endace%}  
+  
 這個看起來會比較輕鬆愜意。
 
 ## 編譯 Compile
@@ -104,14 +121,7 @@ int main()
   * 只需要按一下
 
 ### 練習 1-1
-請將Hello, world!印出來。
-
-* 補上可能會遇到的問題，通稱Bug
-    * `#include<xxxx.h>`格式不對
-    * 左右括號要對稱，有開始就要有結束 ( ) { }
-    * 分號(；)沒打，告訴程式該陳述式(Statement)已結束
-    * 少了return 0；，要告訴程式已經正常結束
-    * 下面執行結果有錯誤訊息，**很重要**，他會跟你一輩子，跟到你心裏發毛。
+[練習1-1](05_practice.md)
 
 ## 主控台 Console
 一開始先學會使用純文字模式顯示，  
@@ -120,5 +130,4 @@ int main()
 對初學者來說，更容易紮實的學習語言
 
 ### 練習 1-2
-請將學號與姓名印出來  
-聽說印出來給助教看過就可以下課了
+[練習1-2](05_practice.md)
