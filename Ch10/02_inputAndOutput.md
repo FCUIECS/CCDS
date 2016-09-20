@@ -4,13 +4,13 @@
 如同C語言中會有的 `#include <stdio.h> …　return 0;` ，等等必定會寫的內容一樣，以下是C++的基礎架構：
 
 ### 範例10-1
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 int main(){
 	std::cout << "Hello World!" << std::endl;
 	return 0;
 }
-```
+{%endace%}
 
 以上為程式入門的`Hello World!`程式 從上述程式可以看到其實與C的架構相似，不同的只有`#include <iostream>`和`std::cout << ...`的部分。
 
@@ -26,14 +26,14 @@ int main(){
 如果一直打`std::cout`是不是會感到厭煩？如果會，那可以參考下面的寫法。
 
 ### 範例10-2
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 using namespace std;
 int main(){
 	cout << "Hello World!" << endl;
 	return 0;
 }
-```
+{%endace%}
 
 在`#include <iostream>`後寫上`using namespace std;`，之後你寫上的`cout`和`endl`就不必再加上`std::`。
 
@@ -44,7 +44,7 @@ int main(){
 除了直接輸出字串，也可以直接輸出整數、變數和運算式的結果，請執行範例10-3。
 
 ### 範例10-3
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 using namespace std;
 int main(){
@@ -54,7 +54,7 @@ int main(){
   cout << "ninetyNine + 1 : " << ninetyNine+1 << endl;
 	return 0;
 }
-```
+{%endace%}
 
 ## 輸入(cin)
 講輸入之前，我們要先提變數型態，我們必須決定輸入型態，才能讓程式知道使用者輸入後的文字該以什麼方式解讀。
@@ -74,7 +74,7 @@ int main(){
 在練習時比較常用到的是char,int,float,double和bool這幾個型態，前四項於C語言時已經充分學習，布林將於下一小節進行說明。另外，在C語言時字串使用char陣列儲存，在C++使用string物件儲存，將於本章第四節進行說明，在此先講解C++的輸入。
 
 ### 範例10-4
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 using namespace std;
 int main(){
@@ -84,14 +84,14 @@ int main(){
   cout << "the \"num\" is " << num << endl;
 	return 0;
 }
-```
+{%endace%}
 ### 練習10-4
 請參考範例10-4，讓使用者輸入小數並該小數印出。
 
 ## 複習：if-else與switch-case
 我們的程式經常會辨別使用者的輸入而產生不同的輸出，現在我們將練習兩種流程控制，if-else與switch-case。現在我們讓使用者輸入他的身高，若大於180則印出basketball，若大於165則印出baseball，若低於165則印出table tennis，請參考範例10-5：
 ### 範例10-5
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 using namespace std;
 int main(){
@@ -106,13 +106,13 @@ int main(){
 		cout << "table tennis" << endl;
 	}
 }
-```
+{%endace%}
 ### 練習10-5
 請參考範例10-5畫出其程式流程
 
 除了if-else之外，若同時有多個分支需要判斷，我們可以使用switch-case，請參考範例10-6：
 ### 範例10-6
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 using namespace std;
 int main(){
@@ -134,7 +134,7 @@ int main(){
 			break;
 	}
 }
-```
+{%endace%}
 要注意的是，每個case後要放上`break;`，沒加會發生什麼事各位同學可以自行嘗試。而`case '1'`中`1`要加上單引號是因為表示為char型態，若要使其表示為整數型態則不需要加上單引號。
 ### 練習10-6
 請修改範例10-6，將num改為整數型態並使程式正確執行。
