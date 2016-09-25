@@ -9,8 +9,8 @@
 * 能用C語言撰寫出帶有輸入輸出及各種型態的程式。
 
 ## 子章節
-* [標準輸出](Ch2/01_stdout.md)
-* [基本五型](Ch2/02_type.md)
-* [伸縮自如的型態](Ch2/03_changable.md)
-* [標準輸入](Ch2/04_stdin.md)
-* [練習](Ch2/05_practice.md)
+* [標準輸出](01_stdout.md)
+* [基本五型](02_type.md)
+* [伸縮自如的型態](03_changable.md)
+* [標準輸入](04_stdin.md)
+* [練習](05_practice.md)
