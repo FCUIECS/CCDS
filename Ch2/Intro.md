@@ -12,5 +12,5 @@
 * [標準輸出](Ch2/01_stdout.md)
 * [基本五型](Ch2/02_type.md)
 * [伸縮自如的型態](Ch2/03_changable.md)
-* [標準輸入]()
-* [練習]()
+* [標準輸入](Ch2/04_stdin.md)
+* [練習](Ch2/05_practice.md)
