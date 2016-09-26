@@ -17,16 +17,15 @@
    (A) int (B) float (C) double (D) char  
 5. 請問 %lu 對應的型態是什麼？  
    (A) unsigned int (B) unsigned long (C) unsigned double (D) unsigned char  
-   
+
 ## 問答題
 1. 請問 100 以 %08d 輸出的結果為何？
 2. 請問 55.32876 以 %4.2d 輸出的結果為何？
 3. 請問 65 以 %c 輸出的結果為何？
 4. 請問 'A' 以 %d 輸出的結果為何？
 5. 請問 9876543210 以 %u 輸出的結果為何？
-6. 請問 scanf("%d", &num) 時，輸入 100 ，num 值為何？
-7. 請問 scanf("%f", &num) 時，輸入 3.1415926 ，num 值為何？
-8. 請問 scanf("%d", &num) 時，輸入 100.125 ，num 值為何？
-9. 請問 scanf("%d", &num) 時，輸入 9876543210 ，num 值為何？
-10. 請問 scanf("%c\n", &num) 時，輸入 6 ，num 值為何？
-   
+6. 請問 scanf("%d", \&num) 時，輸入 100 ，num 值為何？
+7. 請問 scanf("%f", \&num) 時，輸入 3.1415926 ，num 值為何？
+8. 請問 scanf("%d", \&num) 時，輸入 100.125 ，num 值為何？
+9. 請問 scanf("%d", \&num) 時，輸入 9876543210 ，num 值為何？
+10. 請問 scanf("%c\n", \&num) 時，輸入 6 ，num 值為何？
