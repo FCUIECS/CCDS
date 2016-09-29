@@ -57,6 +57,7 @@ printf("%lld", num);
 還有，浮點數也可以加上 long 來修飾，變成更長的浮點數！  
 ```c++
 long double e = 3.1415926;
+printf("%Lf", e);
 ```
 至於他總共佔用幾 bytes？當然是 16 bytes 囉！  
 
