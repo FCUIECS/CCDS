@@ -19,4 +19,4 @@
 - 侯均靜
 
 ### 參考文獻/書籍/網站
-- Null
+- [CPlusPlus.com](http://www.cplusplus.com/)
