@@ -60,8 +60,7 @@ long double e = 3.1415926;
 printf("%Lf", e);
 ```
 至於他總共佔用幾 bytes？當然是 16 bytes 囉！  
-
-
+> **long double 在 C99 才能正常使用。**
 
 ## unsigned
 有時候我們不需要正負號，當我們可以另外處理正負號的時候，我們便可以使用 unsigned 來取消正負號。  

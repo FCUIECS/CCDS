@@ -31,7 +31,9 @@ scanf("%c", &ch);
 | %u         | 無號整數(unsigned int)    |
 | %f         | 單精度浮點數(float)        |
 | %lf        | 倍經度浮點數(double)       |
+| %Lf        | 長倍經度浮點數(long double)|
 | %c         | 字元(char)               |
+
 
 各位務必注意，在 scanf() 中，**不可以**使用以「\\」開頭的任何格式控制字元，例如：換行「\\n」、Tab「\\t」都不可以出現在 scanf() 中。
 
