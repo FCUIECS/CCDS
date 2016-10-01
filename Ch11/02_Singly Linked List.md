@@ -2,6 +2,11 @@
 
 ## 1.Implementation 實作方向
 
+在 C/C++ 當中，我們可以用 Struct（結構）來實作 Linked List。
+在 C++ 當中，Struct 可以寫進方法，這個特性也讓我們實作上比較簡單。
+C 當中的 malloc()，在 C++ 中我們用 new 來代替。
+
+
 ### A. 定義節點
 首先我們必須先定義每個 節點（Node） 到底長什麼樣子。  
 如同以下的程式碼，我們定義一個 data 節點，裡面有 int 型態的資料以及 data 型態的指標。
@@ -30,7 +35,7 @@ DATA *current = NULL;
 DATA* create_node(int number) {
 
 	//宣告一個 DATA 型態的指標，指向 malloc 跟系統要到的記憶體空間。
-    DATA *tempPointer = malloc(sizeof(DATA));
+    DATA *tempPointer = new struct data;
 
     //將資料放進剛拿到的空間，指向下一個節點的指標設為 null
     n->number = number;
@@ -61,7 +66,8 @@ void insert_node(DATA* node1, DATA* node2)
 ### E. 使用 Linked List 作刪除
 
 用 malloc 要來的記憶體空間會放在 heap 而不是 stack，所以不會隨著 function 結束釋放，
-必須要用 free() 釋放掉，否則會造成 memory leak。
+必須要用 free() 釋放掉，否則會造成 memory leak。  
+但在 C++ 中利用 new 就不必這樣做，我們改成用 delete 將其刪除。
 
 刪除時的運作方式：  
 
@@ -78,7 +84,7 @@ void remove_node(DATA* n)
     n->next = n->next->next;
 
     //釋放被刪除節點的記憶體空間
-    free(temp);
+    delete temp;
 }
 ```
 
@@ -99,37 +105,38 @@ void printAll(DATA* head) {
 typedef struct data{
     int number;
     struct data *next;
+
+    DATA* create_node(int number) {
+	    DATA *tempPointer = malloc(sizeof(DATA));
+	    n->number = number;
+	    n->next = NULL;
+	    return tempPointer;
+	}
+
+	void createNewDataAtLast(int number) {
+		current = head;
+		if(head == null) {
+			head = create_node(number);
+		} else {
+			while(current->next != NULL) {
+				current = current->next;
+			}
+			current->next = create_node(number);
+		}
+	}
+
+	void printAll(DATA* head) {
+		if(head == null) return;
+		while(head->next != NULL) {
+			cout << head->number << endl;
+		}
+		cout << head->number << endl;
+	}
+
 }DATA;
 
 DATA *head    = NULL;
 DATA *current = NULL;
-
-DATA* create_node(int number) {
-    DATA *tempPointer = malloc(sizeof(DATA));
-    n->number = number;
-    n->next = NULL;
-    return tempPointer;
-}
-
-void createNewDataAtLast(int number) {
-	current = head;
-	if(head == null) {
-		head = create_node(number);
-	} else {
-		while(current->next != NULL) {
-			current = current->next;
-		}
-		current->next = create_node(number);
-	}
-}
-
-void printAll(DATA* head) {
-	if(head == null) return;
-	while(head->next != NULL) {
-		cout << head->number << endl;
-	}
-	cout << head->number << endl;
-}
 
 int main(int argc, char const *argv[])
 {
@@ -165,7 +172,6 @@ int main(int argc, char const *argv[])
 	
 	return 0;
 }
-
 ```
 
 ___
@@ -181,6 +187,7 @@ typedef struct data{
 }DATA;
 ```
 
+function 必須寫在 struct 裡面。  
 必須要有選單讓使用選擇功能，可以重複使用，每次需要清除畫面。  
 可以用以下功能：
 
