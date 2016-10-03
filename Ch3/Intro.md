@@ -13,7 +13,7 @@
   * [指派運算](03_assignment.md)
   * [布林運算](04_boolean.md)
   * [判斷式](05_ifStatement.md)
-  * [總練習](06_practice.md)  
+  * [練習](06_practice.md)  
 
 ## 助教群的話
 終於開始有些好玩的東西出現了(?)
