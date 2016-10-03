@@ -72,5 +72,6 @@ int main(){
 
 讓程式輸入一個**大寫英文字母**輸出該字母的**小寫**
 如圖所示:  
-![01_Exercise.PNG](img/01_Exercise.PNG)
+![01_Exercise.PNG](img/01_Exercise.PNG)  
+  
 提示:ASCII內'A'代表數字為65，'a'則為97。
