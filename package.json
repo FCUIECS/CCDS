@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "總而言之，讓你放棄我就贏了(誤",
   "dependencies": {
-    "gitbook": "^3.2.2"
+    "gitbook-cli": "^2.3.0"
   },
   "devDependencies": {},
   "scripts": {
