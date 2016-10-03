@@ -111,7 +111,7 @@ printf("%%");
 
 ## 練習
 請試著使用上面所學，宣告適當的變數，使輸出畫面和下面一模一樣：
-{%endace%}
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 a = -1;
 b = 0;
 c = 1;
