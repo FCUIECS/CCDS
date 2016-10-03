@@ -30,7 +30,7 @@ int main(void) {
 
 執行結果為：
 
-{%endace%}
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 Value of x : 10
 Address of x : 0x23ff12
 {%endace%}
@@ -104,7 +104,7 @@ printf("The value of address where ptr point : %d\n", *x);
 {%endace%}
 
 執行結果為：
-{%endace%}
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 The value of x : 10
 The value of address where ptr point : 10
 {%endace%}
@@ -127,7 +127,7 @@ printf("The address of pointer ptr : %p\n", &ptr);
 
 執行結果應該會像以下：
 
-{%endace%}
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 The value of x : 10
 The address of x : 0x12fe1e
 The address where ptr point : 0x12fe1e
@@ -174,7 +174,7 @@ printf("The value of x : %d\n", x);
 {%endace%}
 
 執行結果如下：
-{%endace%}
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 The value of address where ptr point : 20
 The value of x : 20
 {%endace%}
@@ -227,7 +227,7 @@ int main() {
 
 	//傳記憶體位址進去
 	swap(&x, &y);
-	
+
 	printf("After : x = %d, y = %d\n", x, y );
 	return 0;
 }
@@ -236,7 +236,7 @@ int main() {
 
 執行結果：
 
-{%endace%}
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 Before : x = 5, y = 10
 After : x = 10, y = 5
 {%endace%}
