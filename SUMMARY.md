@@ -23,7 +23,7 @@
   * [指派運算](Ch3/03_assignment.md)
   * [布林運算](Ch3/04_boolean.md)
   * [判斷式](Ch3/05_ifStatement.md)
-  * [總練習](Ch3/06_practice.md)  
+  * [練習](Ch3/06_practice.md)  
 * [循環演算 Loop & Array](Ch4/Intro.md)
   * [迴圈簡介]()
   * [陣列簡介]()
