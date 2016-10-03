@@ -8,30 +8,30 @@
 最為基礎的則是if條件判斷，他的基本語法如下:
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-	  if(條件){
-        do1;
-  	}
-    else{
-        do2;
-    }
+if(條件){
+    do1;
+}
+else{
+    do2;
+}
 {%endace%}
 
 所以如果拿我們最上面案例的話就會變成
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-    if(放颱風假){
-        在家耍廢;
-	  }
-    else{
-        乖乖去上課;
-    }
+if(放颱風假){
+    在家耍廢;
+}
+else{
+    乖乖去上課;
+}
 {%endace%}
 
 當然在必要時刻其實不一定有if就要有else
 我們也可以只有一個if即可，例如:
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-    if(放颱風假){
-        在家耍廢;
-    }
+if(放颱風假){
+    在家耍廢;
+}
 {%endace%}
 有了最基礎的判斷式之後，其實可以做的事情就更多了
 
@@ -46,22 +46,22 @@ if只能判斷一件事情嗎? 答案當然是否定的。
 例如:
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-    if(放颱風假){
-		    if(大風大雨){
-			      在家耍廢;
-		    }
-				else{
-				  	打球;
-				}
-	  }
-    else{
-    	  if(大風大雨){
-			      在家耍廢;
-		    }
-		    else{
-			      乖乖去上課;
-		    }
+if(放颱風假){
+    if(大風大雨){
+	      在家耍廢;
     }
+		else{
+		  	打球;
+		}
+}
+else{
+	  if(大風大雨){
+	      在家耍廢;
+    }
+    else{
+	      乖乖去上課;
+    }
+}
 {%endace%}
 
 以上面這個案例來看的話，他會先對"放颱風假"這件事情進行檢查，並根據條件的是否，進而去下一層檢查"大風大雨"，才來決定要做哪些事情。
@@ -78,15 +78,15 @@ if只能判斷一件事情嗎? 答案當然是否定的。
 也就是if elseif else的條件式，他的基本語法如下:
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-    if(條件1){
-        do1;
-	  }
-	  else if(條件2){
-		    do2;
-	  }
-    else{
-        do3;
-    }
+if(條件1){
+    do1;
+}
+else if(條件2){
+    do2;
+}
+else{
+    do3;
+}
 {%endace%}
 
 而在進行條件檢查時他會依序從上開始檢查，如果所有條件都不符合才會執行至else內部
@@ -103,16 +103,16 @@ switch是C 語言提供的另一種條件判斷方式，本身只能比較數值
 但是使用適當的話，它可比 if 判斷式來得有效率；switch 的基本語法如下:
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-	switch (變數名稱或運算式) {
-    case 符合的數字或字元:
-        do1;
-        break;
-    case 符合的數字或字元:
-        do2;
-        break;
-    default:
-        do3;
-	}
+switch (變數名稱或運算式) {
+  case 符合的數字或字元:
+      do1;
+      break;
+  case 符合的數字或字元:
+      do2;
+      break;
+  default:
+      do3;
+}
 {%endace%}
 
 其中程式再執行時會先看看 switch 的括號，當中置放要取出數值的變數，取出數值之後，會與case 設定的數字或字元比對，符合則執行該case **以下的陳述句直到遇到break為止** 才會離開switch，若case內都沒有相符的則會執行default內的內容，但是default本身並不一定要存在，這部分跟if else中，其實可以不要寫else是一樣的。
@@ -121,38 +121,38 @@ switch是C 語言提供的另一種條件判斷方式，本身只能比較數值
 這樣講可能大家有點不可以很清楚的理解，假設今天有一個例子利用if elseif else寫法為:
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-	int a;
-	if(a == 1){
-		//do1
-	}
-	else if(a == 2) {
-	    //do2
-	}
-	else if(a == 3) {
-	    //do3
-	}
-	else{
-		//do4
-	}
+int a;
+if(a == 1){
+	//do1
+}
+else if(a == 2) {
+    //do2
+}
+else if(a == 3) {
+    //do3
+}
+else{
+	//do4
+}
 {%endace%}
 
 那其實也可以將其代換成switch case的寫法如下:
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-	int a;
-	switch(a) {
-    case 1:
-        //do1
-        break;
-    case 2:
-        //do2
-        break;
-    case 3:
-        //do3
-        break;
-    default:
-        //do4    
-	}
+int a;
+switch(a) {
+  case 1:
+      //do1
+      break;
+  case 2:
+      //do2
+      break;
+  case 3:
+      //do3
+      break;
+  default:
+      //do4    
+}
 {%endace%}
 
 當然if跟switch之間並不是具有那麼強烈的優異性，只是遇到複合條件時，switch 就幫不上忙了，你無法在 switch 中組合複雜的條件陳述。
