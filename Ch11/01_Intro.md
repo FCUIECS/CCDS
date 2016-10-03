@@ -15,13 +15,13 @@ Linked List 是資料結構的其中一種，利用節點與指標來將資料�
 
 例如，有一個學生管理系統，我們需要宣告很多學生的變數，可能會這樣做：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 typedef struct stu {
 	int stuID;
 }Student;
 
 Student student[10];
-```
+{%endace%}
 
 可是，每一年的學生數量都不同，我們也無法預測未來的學生數量。
 如果我們宣告的陣列太小，之後就會不夠用；若宣告的陣列太大，又浪費記憶體空間。

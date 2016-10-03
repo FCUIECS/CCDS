@@ -39,9 +39,9 @@ Code::Blocks是本次教材中推薦使用的IDE，安裝教學使用Code::Block
 
 大部分的套件管理程式都有收錄 Code::Blocks 的最新版本，我們可以直接用 `apt-get` 來安裝。
 
-```bash
+{%endace%}bash
 $ sudo apt-get install codeblocks
-```
+{%endace%}
 
 ## 第一次啟動
 1. 程式會問你未來是否要用 Code::Blocks 來開啟 C/C++ 檔案，你可以自行決定。  

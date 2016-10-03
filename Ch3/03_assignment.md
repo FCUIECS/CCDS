@@ -70,7 +70,7 @@
 
 上述就是在指派的運算子部分，而在這邊我們利用一些較簡單的例子帶過，我相信大家應該可以可以理解以下程式內容，其餘指派運算子算法其實相同於案例就不在多加描述。
 
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <stdio.h>
 int main(){
     int a = 5;
@@ -84,4 +84,4 @@ int main(){
 
     return 0;
 }
-```
+{%endace%}

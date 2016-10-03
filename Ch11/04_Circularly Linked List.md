@@ -16,12 +16,12 @@ ___
 ### 練習 11-4
 
 請設計一個 循環 Linked List 程式，節點結構為：
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 typedef struct data{
     int number;
     struct data *next;
 }DATA;
-```
+{%endace%}
 
 有選單，可以用以下功能：
 
@@ -50,7 +50,7 @@ typedef struct data{
 * 此題需用鏈結串列(Linked List) 設計，程式碼數量、美觀、效率...等則列入加分考量。  
 * 若產生的某個亂數已存在於串列中，則告知使用者，這個亂數不會被新增。  
 * 此程式需循環執行，直到使用者結束此程式。
- 
+
 Fig.(1)  
 ![F1.png](img/F1.png)  
 
@@ -58,4 +58,3 @@ Fig.(2)
 ![F2.png](img/F2.png)  
 
 ___
-

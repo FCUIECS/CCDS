@@ -4,9 +4,9 @@
 
 ## 算數運算式
 一個運算式基礎會由運算元(Operands)、運算子(Operators)和間隔符號(Delimiters)等三者所組成。舉一案例來說：
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 A+B/(A-B)
-```
+{%endace%}
 
 其中運算元(Operands)就像是上面這個案例的A和B，而運算子(Operators)則是算式中的+、/及-，理所當然的剩下來的括號自然就是間隔符號(Delimiters)了。
 
@@ -35,7 +35,7 @@ C 語言的算術運算子比較常見的例如:加、減、乘、除、取餘�
 ## 課堂演練
 直接從程式面去看的話
 
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <stdio.h>
 int main(){
     int temp1=13;
@@ -63,7 +63,7 @@ int main(){
 
     return 0;
 }
-```
+{%endace%}
 
 看完上述程式執行之後對於算數、遞增及遞減運算子應該都有基本認識了吧？在下個章節我們將會介紹其他的運算子。
 

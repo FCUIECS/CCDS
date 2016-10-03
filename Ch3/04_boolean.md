@@ -56,7 +56,7 @@ C 語言中的關係運算子都是二元運算子，所以也就是代表需要
 
 所以今天假設有一程式內容為:
 
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <stdio.h>
 int main(){
     int a = 5;
@@ -64,7 +64,7 @@ int main(){
     printf("%d\n", a >= b);
     return 0;
 }
-```
+{%endace%}
 則該程式輸出則為1，這應該是非常淺而易見的，對吧？
 
 ## 邏輯運算子
@@ -177,7 +177,7 @@ int main(){
 
 ## 練習時間
 想必大家一定看的眼花撩亂，不知道大家是否可以依據此表算出以下答案各為多少嗎？
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 5+2*3
 
 4+(2-8)*45/2-5
@@ -185,4 +185,4 @@ int main(){
 5<<(2+2)*5-3+4
 
 (14<<(2+1)*3+1)-5573
-```
+{%endace%}

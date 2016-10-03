@@ -13,14 +13,14 @@
  
 ## scanf
 scanf() 的用法和 printf() 有點類似，都是透過格式控制字串來決定要怎麼輸入，舉個例子：  
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 int num;
 double fnum;
 char ch;
 scanf("%d", &num);
 scanf("%lf", &fnum);
 scanf("%c", &ch);
-```
+{%endace%}
 格式控制字串中帶有 %d ，代表著我要輸入一個整數，並將它存到 num 中。  
 接著，讓我們再次複習一下幾個常用的格式控制字元代表的型態吧：
 
@@ -45,8 +45,8 @@ scanf("%c", &ch);
 
 ## 練習
 請宣告幾個變數依序儲存以下輸入的資料，並以相同方式輸出到螢幕上。  
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 A
 3.14159
 9223372036854775807
-```
+{%endace%}

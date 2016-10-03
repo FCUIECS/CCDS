@@ -13,13 +13,13 @@
 
 加上一個指標就行了。
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 typedef struct data{
     int number;
     struct data *next;
     struct data *prev;
 }DATA;
-```
+{%endace%}
 
 至於其他的方法，就要多增加一些程式碼，像是新增、刪除。  
 想一下，自己寫寫看吧！
@@ -29,13 +29,13 @@ ___
 ### 練習 11-3
 
 請設計一個 雙向 Linked List 程式，節點結構為：
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 typedef struct data{
     int number;
     struct data *next;
     struct data *prev;
 }DATA;
-```
+{%endace%}
 
 有選單，可以用以下功能：
 

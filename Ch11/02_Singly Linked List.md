@@ -11,27 +11,27 @@ C 當中的 malloc()，在 C++ 中我們用 new 來代替。
 首先我們必須先定義每個 節點（Node） 到底長什麼樣子。  
 如同以下的程式碼，我們定義一個 data 節點，裡面有 int 型態的資料以及 data 型態的指標。
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 typedef struct data{
     int number;
     struct data *next;
 }DATA;
-```
+{%endace%}
 
 ### B. 定義必要的指標
 接著我們需要至少兩個指標，用來實作 Linked List 的各種功能。  
 這兩個指標一個是 head，另一個是 current。head 永遠指向第一個節點，而 current 則是作為各種功能的定位點。
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 DATA *head    = NULL;
 DATA *current = NULL;
-```
+{%endace%}
 
 ### C. 生成節點的方式
 我們要開始來生成節點了。假如今天有一筆新的資料被加入，我們應該怎麼做呢？  
 寫一個生成 function，向系統要一塊記憶體空間，然後把指標回傳。
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 DATA* create_node(int number) {
 
 	//宣告一個 DATA 型態的指標，指向 malloc 跟系統要到的記憶體空間。
@@ -44,7 +44,7 @@ DATA* create_node(int number) {
     //回傳指標
     return tempPointer;
 }
-```
+{%endace%}
 
 ### D. 使用 Linked List 作插入
 
@@ -54,14 +54,14 @@ DATA* create_node(int number) {
 
 ![linked-list-insert.png](img/linked-list-insert.png)
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 //把 node2 塞到 node1 後面。
 void insert_node(DATA* node1, DATA* node2)
 {
     node2->next = node1->next;
     node1->next = node2;
 }
-```
+{%endace%}
 
 ### E. 使用 Linked List 作刪除
 
@@ -73,7 +73,7 @@ void insert_node(DATA* node1, DATA* node2)
 
 ![linked-list-del.png](img/linked-list-del.png)
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 //刪除 n 的下一個 node 
 void remove_node(DATA* n)
 {
@@ -86,22 +86,22 @@ void remove_node(DATA* n)
     //釋放被刪除節點的記憶體空間
     delete temp;
 }
-```
+{%endace%}
 
 ### F. 印出所有資料
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 void printAll(DATA* head) {
 	while(head->next != NULL) {
 		cout << head->number << endl;
 	}
 	cout << head->number << endl;
 }
-```
+{%endace%}
 
 ## 2. Examples 範例
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 typedef struct data{
     int number;
     struct data *next;
@@ -172,20 +172,20 @@ int main(int argc, char const *argv[])
 	
 	return 0;
 }
-```
+{%endace%}
 
 ___
 
 ### 練習 11-1
 
 請設計一個 Linked List 程式，節點結構為：
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 typedef struct data{
     int number;
     string name;
     struct data *next;
 }DATA;
-```
+{%endace%}
 
 function 必須寫在 struct 裡面。  
 必須要有選單讓使用選擇功能，可以重複使用，每次需要清除畫面。  

@@ -4,92 +4,92 @@
 ## short
 在上一章節，我們有提到 int 佔用了 4 bytes，不過假如要儲存的數字沒有那麼大，用 int 儲存，真的可謂殺雞用牛刀。  
 short，中文稱為「短的」，是一個將型態佔用空間砍半的修飾詞，只能用在 int 上。  
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 short a = 1;
 short b = 32767;
 short c = -32767;
-```
+{%endace%}
 或者，你也可以這樣寫：  
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 short int a = 1;
 short int b = 32767;
 short int c = -32767;
-```
+{%endace%}
 最後的問題是，我們要怎麼把這個佔用空間砍半的東西輸出呢？方法很簡單，只需要加點手腳：  
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 printf("%hd", num);
-```
+{%endace%}
 
 > **如果不在 short 後面指定型態，預設使用 int。**
 
 ## long
 有辦法縮小就有辦法拉長！如果 4 bytes 不夠你用，那你可以試試看 8 bytes 的 long long int。  
 long，中文稱為「長的」，是一個將型態佔用空間變成翻倍的修飾詞，可以用在 int、double、char 上。     
-```
+{%endace%}
 long a = 2147483648;
-```
+{%endace%}
 聰明的你或許會猜到，那它是否和short一樣，可以在後面加上 int 呢？  
 答案是「可以」，只是有些小地方需要你特別注意！  
 在 64 位元的系統上，一個 long 會各自表述，最大的差別在 Windows 及所有 Unix 及類 Unix 系統上，前者一樣是 4 bytes，後者則是 8 bytes！  
 因此，在 Windows 上，如果你輸入的是這串：
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 long a = 9876543210;
 long int b = 9876543210;
-```
+{%endace%}
 那麼你可能會收到編譯器的警告，因為它超過 4 bytes 所能儲存的範圍，也就是發生了**溢位**！  
 你必須改成這樣寫才行：
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 long long int a = 9876543210;
-```
+{%endace%}
 而在 Unix 及所有類 Unix 的系統上，不用擔心這個問題，你用哪個都一樣。  
 既然前面都這麼麻煩了，那輸出肯定也是個苦差事！  
 當你今天使用 long 或 long int 宣告時，你必須這樣寫：
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 printf("%ld", num);
-```
+{%endace%}
 不過，如果你是寫 long long int，那你就得要加上一個 l：
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 printf("%lld", num);
-```
+{%endace%}
 
 > **如果不在 long 後面指定型態，預設使用 int。**
 
 還有，浮點數也可以加上 long 來修飾，變成更長的浮點數！  
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 long double e = 3.1415926;
 printf("%Lf", e);
-```
+{%endace%}
 至於他總共佔用幾 bytes？當然是 16 bytes 囉！  
 > **long double 在 C99 才能正常使用。**
 
 ## unsigned
 有時候我們不需要正負號，當我們可以另外處理正負號的時候，我們便可以使用 unsigned 來取消正負號。  
 unsigned，中文稱為「無號的」，是一個將有號型態變成無號型態的修飾詞，通常會用來使該型態能儲存的值變成兩倍，只能用在 int 及 char。  
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 unsigned int a = 4294967295;
 unsigned char b = 255;
-```
+{%endace%}
 如果你在 unsigned 中使用了負數，那麼你的數字會發生溢位，變回正數，舉例來說：  
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 unsigned int a = -1;
 unsigned int b = 255;
-```
+{%endace%}
 上面兩者值是一模一樣的！  
 當你需要輸出的話，則是要更換控制字元：  
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 printf("%u", num);
-```
+{%endace%}
 
 > **如果不在 unsigned 後面指定型態，預設使用 int。**
 
 並且，unsigned 還可以跟 short 及 long 混搭 (僅限int)，例如：
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 unsigned short a = 1;
 unsigned short int a = 1;
 unsigned long a = 1;
 unsigned long int a = 1;
 unsigned long long int a = 1;
-```
+{%endace%}
 
 ## 控制字元
 我們剛剛都在談型態「宣告時」的彈性，現在我們要來聊聊「輸出時」的彈性。  
@@ -105,13 +105,13 @@ printf()還可以做到例如：「限制輸出字數」、「限制小數點後
 | .(數字) | 小數點之後要顯示幾個字     | %.3f        |
 
 最後，如果你恰巧需要輸出一個 % 符號，你會需要這樣寫：  
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 printf("%%");
-```
+{%endace%}
 
 ## 練習
 請試著使用上面所學，宣告適當的變數，使輸出畫面和下面一模一樣：
-```
+{%endace%}
 a = -1;
 b = 0;
 c = 1;
@@ -128,4 +128,4 @@ m = -9223372036854775807;
 n = 18446744073709551615;
 o = 3.141592;
 p = 3.141592653589793;
-```
+{%endace%}

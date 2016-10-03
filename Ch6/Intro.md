@@ -9,14 +9,14 @@
 
 一般來說，程式啟動時從程式進入點開始，即 main 的所在位置，從以前到現在，我們程式也都是寫在 main 裡面。例如下方這個程式：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int main() {
 	printf("hello world!\n");
 	return 0;
 }
 
-```
+{%endace%}
 
 不過，有時候我們會有一些重複的程式碼，舉例來說，我們可能常常用到次方這個計算，這時候我們就能用 Function 來減少程式碼的數量，而且若是需要修改計算方式的話，不需要每個地方都修改，增加維護性。其實，說穿了就是各位在數學上都有學習過的函數。y = f(x)，只是現在用 C 來表達。
  
@@ -31,17 +31,17 @@ int main() {
 
 根據定義，Function 的本體寫法為：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 return_type function_name( parameter list ) {
    body of the function
 }
 
-```
+{%endace%}
 
 舉例來說，次方的 Function 可以寫成這樣：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int pow(int base, int power) {
 	int i, sum = base;
@@ -51,33 +51,33 @@ int pow(int base, int power) {
 	return sum; 
 }
 
-```
+{%endace%}
 
 ### 2.宣告方式：
 
 宣告原型為：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 return_type function_name( parameter list );
 
-```
+{%endace%}
 
 例如以下這個 Function：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int pow(int base, int power);
 
-```
+{%endace%}
 
 應該寫成這樣：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int pow(int, int);
 
-```
+{%endace%}
 
 ### 3.位置的藝術
 
@@ -85,7 +85,7 @@ int pow(int, int);
 
 #### 正確：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 void f1(void) {
 	...
@@ -95,9 +95,9 @@ int main(void) {
 	f1();
 }
 
-```
+{%endace%}
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 void f1(int);
 
@@ -109,9 +109,9 @@ void f1(int n) {
 	...
 }
 
-```
+{%endace%}
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 void f2(void) {
 	...
@@ -125,11 +125,11 @@ int main(void) {
 	f1();
 }
 
-```
+{%endace%}
 
 #### 錯誤：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int main(void) {
 	f1();
@@ -139,9 +139,9 @@ void f1(int n) {
 	...
 }
 
-```
+{%endace%}
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 void f1(int n) {
 	f2();
@@ -155,35 +155,35 @@ int main(void) {
 	f1();
 }
 
-```
+{%endace%}
 
 ### 4.沒有輸入或輸出
 
 Function 是可以接受沒有輸入或輸出的，以下這幾種寫法都會成立：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 void pow(int base, int power) {
 	...
 }
 
-```
+{%endace%}
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int pow(void) {
 	...
 }
 
-```
+{%endace%}
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 void pow() {
 	...
 }
 
-```
+{%endace%}
 
 ___
 
@@ -209,7 +209,7 @@ x = 5, y = 10，當我們呼叫 swap(x,y); 之後會變成 x = 10, y = 5。
 
 這時大家可能會這樣寫：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 void swap(int x, int y) {
 	int tmp;
@@ -226,7 +226,7 @@ int main() {
 	return 0;
 }
 
-```
+{%endace%}
 
 但是執行後卻發現，Before 和 After 是一樣的，意味著值沒有被交換，為什麼？
 
@@ -243,7 +243,7 @@ int main() {
 
 通常要做一件事情，我們會用迴圈，例如要寫一個程式，功能為「1 加到 n」
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int sum(int n) { 
 	int i;
@@ -253,11 +253,11 @@ int sum(int n) {
 	return tmp; 
 }
 
-```
+{%endace%}
 
 不過我們可以利用 Function 回傳值可以呼叫 Function 的特性，達到一種不斷呼叫自己的感覺。這種使用方式稱為遞迴（Recursion）
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int sum(int n) { 
 	if (n==1) 
@@ -266,7 +266,7 @@ int sum(int n) {
 		return sum(n-1) + n; 
 }
  
-```
+{%endace%}
 
 這是一種抽象的概念，如果我們要計算 sum(10)，程式會這樣跑：
 

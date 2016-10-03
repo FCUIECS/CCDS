@@ -36,12 +36,12 @@ printf()是一個非常特別的函式，其中可以帶入數個參數，其中
 
 ## 練習
 請試著輸出你的班級、學號、姓名！
-```c++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 int main(){
     printf("班級：資訊一癸\n");
     printf("學號：D9876543\n");
     printf("姓名：釋泛立\n");
 }
-```
+{%endace%}
 
 printf()的功能還有很多，我們將再接下來教完型態之後一併學習。  

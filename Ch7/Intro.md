@@ -17,7 +17,7 @@
 
 如果我們想知道變數的記憶體位址，可以使用取址運算子「&」：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int main(void) {
 	int x = 10;
@@ -26,14 +26,14 @@ int main(void) {
 	return 0;
 }
 
-```
+{%endace%}
 
 執行結果為：
 
-```
+{%endace%}
 Value of x : 10
 Address of x : 0x23ff12
-```
+{%endace%}
 
 也就是說，記憶體位置 0x23ff12 這個地方放著 10，這個地方的名字叫做 x。
 
@@ -46,21 +46,21 @@ Address of x : 0x23ff12
 
 指標的宣告方式為：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 type *ptr;
 
-```
+{%endace%}
 
 例如：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int *ptr;
 float *ptr2;
 char *ptr3;
 
-```
+{%endace%}
 
 宣告指標必須宣告型態，讓 Compiler 可以知道目標記憶體位址上的資料要如何解釋。
 
@@ -69,23 +69,23 @@ char *ptr3;
 
 我們必須把指標指向某個記憶體位址，可以這樣寫：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int x = 10;
 int *ptr = &x;
 
-```
+{%endace%}
 
 或是
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int x = 10;
 int *ptr;
 
 ptr = &x;
 
-```
+{%endace%}
 
 這樣子寫，代表宣告 ptr 是一個 int 型態的指標，指向變數 x 的記憶體位址。
 
@@ -93,7 +93,7 @@ ptr = &x;
 
 如果要取得這個記憶體的值，我們要用 * 提取運算子。
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int x = 10;
 int *ptr &x;;
@@ -101,18 +101,18 @@ int *ptr &x;;
 printf("The value of x : %d\n", x);
 printf("The value of address where ptr point : %d\n", *x);
 
-```
+{%endace%}
 
 執行結果為：
-```
+{%endace%}
 The value of x : 10
 The value of address where ptr point : 10
-```
+{%endace%}
 
 
 如果我們把全部都 print 出來比較的話：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int x = 10;
 int *ptr = &x;;
@@ -123,17 +123,17 @@ printf("The address where ptr point : %p\n", ptr);
 printf("The value of address where ptr point : %d\n", *ptr);
 printf("The address of pointer ptr : %p\n", &ptr);
 
-```
+{%endace%}
 
 執行結果應該會像以下：
 
-```
+{%endace%}
 The value of x : 10
 The address of x : 0x12fe1e
 The address where ptr point : 0x12fe1e
 The value of address where ptr point : 10
 The address of pointer ptr : 0xfa131a
-```
+{%endace%}
 
 不要忘記指標也擁有自己的記憶體位址。
 
@@ -149,35 +149,35 @@ ___
 
 我們寫了一個以下的程式：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int x = 10;
 int *ptr = &x;
 
-```
+{%endace%}
 
 並且對 ptr 所指向的值做修改：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 *ptr = 20;
 
-```
+{%endace%}
 
 這時候值會如何變化呢？我們 print 出來看看：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 printf("The value of address where ptr point : %d\n", *ptr);
 printf("The value of x : %d\n", x);
 
-```
+{%endace%}
 
 執行結果如下：
-```
+{%endace%}
 The value of address where ptr point : 20
 The value of x : 20
-```
+{%endace%}
 
 由於指標 ptr 指向的記憶體位址和變數 x 所代表的記憶體位址是同樣的，於是我們修改了 ptr 指標所指向的記憶體位址的值，也同樣修改了變數 x 的值。
 
@@ -191,7 +191,7 @@ The value of x : 20
 
 原本的程式應該是這樣：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 void swap(int x, int y) {
 	int tmp;
@@ -208,11 +208,11 @@ int main() {
 	return 0;
 }
 
-```
+{%endace%}
 
 我們改成這樣：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 void swap(int *x, int *y) {
 	int tmp;
@@ -232,14 +232,14 @@ int main() {
 	return 0;
 }
 
-```
+{%endace%}
 
 執行結果：
 
-```
+{%endace%}
 Before : x = 5, y = 10
 After : x = 10, y = 5
-```
+{%endace%}
 
 x, y 成功被交換了！如果你不知道為什麼，從頭再看一次指標的定義吧！
 
@@ -251,7 +251,7 @@ x, y 成功被交換了！如果你不知道為什麼，從頭再看一次指標
 
 為了避免有許多已不必要的指標掌控著記憶體，指標若不使用就應該被釋放掉。使用方式很簡單，使用 free() 函式即可。使用 free() 釋放指標後，記憶體空間將被歸還給系統，避免程式占用大量記憶體。
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int *ptr;
 
@@ -259,19 +259,19 @@ int *ptr;
 
 free(ptr);
 
-```
+{%endace%}
 
 ### 2.宣告指標後，要指向 void 或其他地址
 
 假設有一程式如下：
 
-```C++
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 
 int *ptr;
 
 *ptr = 10;
 
-```
+{%endace%}
 
 這將會發生大問題，為什麼？  
 當宣告了一個指標後，代表某一塊記憶體空間被拿來當作是 int 型態指標的空間，但是這個空間原本可能有某些資料沒有被清掉。於是，你的指標正指向一個未知的區域，有時候不小心就可能造成大問題。  
