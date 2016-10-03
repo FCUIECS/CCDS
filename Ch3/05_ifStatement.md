@@ -48,18 +48,18 @@ if只能判斷一件事情嗎? 答案當然是否定的。
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 if(放颱風假){
     if(大風大雨){
-	      在家耍廢;
-    }
-		else{
-		  	打球;
-		}
-}
-else{
-	  if(大風大雨){
-	      在家耍廢;
+        在家耍廢;
     }
     else{
-	      乖乖去上課;
+        打球;
+    }
+}
+else{
+    if(大風大雨){
+        在家耍廢;
+    }
+    else{
+        乖乖去上課;
     }
 }
 {%endace%}
@@ -123,7 +123,7 @@ switch (變數名稱或運算式) {
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 int a;
 if(a == 1){
-	//do1
+    //do1
 }
 else if(a == 2) {
     //do2
@@ -132,7 +132,7 @@ else if(a == 3) {
     //do3
 }
 else{
-	//do4
+    //do4
 }
 {%endace%}
 
