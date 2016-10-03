@@ -25,7 +25,7 @@ printf("%hd", num);
 ## long
 有辦法縮小就有辦法拉長！如果 4 bytes 不夠你用，那你可以試試看 8 bytes 的 long long int。  
 long，中文稱為「長的」，是一個將型態佔用空間變成翻倍的修飾詞，可以用在 int、double、char 上。     
-{%endace%}
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
 long a = 2147483648;
 {%endace%}
 聰明的你或許會猜到，那它是否和short一樣，可以在後面加上 int 呢？  
