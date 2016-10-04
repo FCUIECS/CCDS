@@ -39,6 +39,25 @@ if(放颱風假){
 給大家一個實例的實作試試看:
 假設今天輸入計概分數，分數>=60就顯示"及格"，<60則顯示"當掉"。那該如何利用最簡單的if else判斷式去做呢？  
 
+
+### 解答
+
+{%ace edit=false, lang='c_cpp', theme='monokai'%}
+#include <stdio.h>
+
+int main(){
+    int score;
+    scanf("%d",&score);
+    if(score >=60){
+        printf("及格!");
+    }
+    else{
+        printf("當掉!");
+    }
+    return 0;
+} 
+{%endace%}
+
 <h2>巢狀if</h2>
 
 if只能判斷一件事情嗎? 答案當然是否定的。
