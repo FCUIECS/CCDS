@@ -82,7 +82,7 @@ void insert_node(Data node1, Data node2)
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 //刪除 n 的下一個 node
-void remove_node(Data n)
+void remove_node(Data* n)
 {
 	//宣告一指標指向 n 的下一個節點
 	Data* temp = n->next;
@@ -123,7 +123,7 @@ struct Data{
     Data *next;
 
     Data(int number) {
-   	    this->number = number;
+   	  	this->number = number;
 	    this->next = NULL;
 	}
 
