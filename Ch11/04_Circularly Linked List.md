@@ -17,15 +17,9 @@
 
 請設計一個 循環 Linked List 程式，需要有建構子以及get方法，節點結構為：
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-<<<<<<< 0e74e9bae0f2ad82547fd410b3cb0013c6364722
 struct Data{
     int number;
     Data *next;
-=======
-struct DATA{
-    int number;
-    DATA *next;
->>>>>>> Update Ch11
 };
 {%endace%}
 
@@ -62,5 +56,3 @@ Fig.(1)
 
 Fig.(2)  
 ![F2.png](img/F2.png)  
-
-___
