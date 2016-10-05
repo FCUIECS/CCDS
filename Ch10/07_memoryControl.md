@@ -13,6 +13,7 @@
 使用符號`*`可以將儲存位址的值取出，使用符號`&`可以將本地位址取出。請參考範例10-16
 
 ### 範例10-16
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 #include <string>
@@ -59,6 +60,7 @@ int main(){
 另外，關於函式(function)中的參數，我們也可以放上指標，呼叫時就會傳位址給函式，這時我們在函式中改動值會影響到該參數，請比較範例10-18兩個程式。
 
 ### 範例10-18
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 #include <string>
@@ -96,6 +98,7 @@ int main(){
 ## struct-array by pointer
 
 ### 範例10-19
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 #include <string>
@@ -129,8 +132,10 @@ int main(){
     return 0;
 }
 {%endace%}
+
 以上作法為我們宣告了一個指標陣列，然後用`new`把物件放進陣列中，此種寫法要記得寫delete。
 ### 範例10-20
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 #include <string>
@@ -165,6 +170,7 @@ int main(){
     return 0;
 }
 {%endace%}
+
 10-20的作法為宣告一個雙指標的變數，然後用分別`new`指標陣列及物件把物件放進陣列中，此種寫法要記得將雙指標的變數也`delete`掉。
 
 10-20的作法會較佳，如果有新的陣列要建立可以直接使用該變數，而不用額外宣告一個指標陣列。
