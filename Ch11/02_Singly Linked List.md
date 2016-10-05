@@ -34,17 +34,19 @@ DATA *current = NULL;
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 DATA* create_node(int number) {
 
-	//宣告一個 DATA 型態的指標，指向 malloc 跟系統要到的記憶體空間。
-    DATA *tempPointer = new struct data;
+	//宣告一個 DATA 型態的指標，new 一個出來
+	struct data *tempPointer = new struct data;
 
-    //將資料放進剛拿到的空間，指向下一個節點的指標設為 null
-    n->number = number;
-    n->next = NULL;
+	//將資料放進剛拿到的空間，指向下一個節點的指標設為 null
+    tempPointer->number = number;
+    tempPointer->next = NULL;
 
     //回傳指標
     return tempPointer;
 }
 {%endace%}
+
+
 
 ### D. 使用 Linked List 作插入
 
@@ -56,7 +58,7 @@ DATA* create_node(int number) {
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 //把 node2 塞到 node1 後面。
-void insert_node(DATA* node1, DATA* node2)
+void insert_node(struct data* node1, struct data* node2)
 {
     node2->next = node1->next;
     node1->next = node2;
@@ -74,11 +76,11 @@ void insert_node(DATA* node1, DATA* node2)
 ![linked-list-del.png](img/linked-list-del.png)
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-//刪除 n 的下一個 node 
+//刪除 n 的下一個 node
 void remove_node(DATA* n)
 {
 	//宣告一指標指向 n 的下一個節點
-	DATA* temp = n->next;
+	struct data* temp = n->next;
 
 	//將 n 指向下下一個節點
     n->next = n->next->next;
@@ -90,12 +92,13 @@ void remove_node(DATA* n)
 
 ### F. 印出所有資料
 
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 void printAll(DATA* head) {
 	while(head->next != NULL) {
 		cout << head->number << endl;
 	}
-	cout << head->number << endl;
+	cout << temp->number << endl;
 }
 {%endace%}
 
@@ -106,37 +109,38 @@ typedef struct data{
     int number;
     struct data *next;
 
-    DATA* create_node(int number) {
-	    DATA *tempPointer = malloc(sizeof(DATA));
-	    n->number = number;
-	    n->next = NULL;
+    struct data* create_node(int number) {
+    	struct data *tempPointer = new struct data;
+	    tempPointer->number = number;
+	    tempPointer->next = NULL;
 	    return tempPointer;
 	}
 
-	void createNewDataAtLast(int number) {
-		current = head;
-		if(head == null) {
-			head = create_node(number);
-		} else {
-			while(current->next != NULL) {
-				current = current->next;
-			}
-			current->next = create_node(number);
+	void printAll() {
+		struct data* temp = this;
+		while(temp->next != NULL) {
+			cout << temp->number << endl;
+			temp = temp->next;
 		}
-	}
-
-	void printAll(DATA* head) {
-		if(head == null) return;
-		while(head->next != NULL) {
-			cout << head->number << endl;
-		}
-		cout << head->number << endl;
+		cout << temp->number << endl;
 	}
 
 }DATA;
 
 DATA *head    = NULL;
 DATA *current = NULL;
+
+void createNewDataAtLast(int number) {
+	current = head;
+	if(head == NULL) {
+		head = head->create_node(number);
+	} else {
+		while(current->next != NULL) {
+			current = current->next;
+		}
+		current->next = head->create_node(number);
+	}
+}
 
 int main(int argc, char const *argv[])
 {
@@ -145,10 +149,8 @@ int main(int argc, char const *argv[])
 		cout << "Choose the function you want :" << endl;
 		cout << "1. Add data" << endl;
 		cout << "2. Print All datas" << endl;
-		cout << "3. Exit"
-		cint >> choice;
-
-		system("cls");
+		cout << "3. Exit" << endl;
+		cin >> choice;
 
 		switch(choice) {
 			case 1:
@@ -159,7 +161,7 @@ int main(int argc, char const *argv[])
 				cout << "Add data successfully!" << endl;
 				break;
 			case 2:
-				printAll(head);
+				head->printAll();
 				break;
 			case 3:
 				exit(0);
@@ -167,14 +169,12 @@ int main(int argc, char const *argv[])
 				cout << "Error!" << endl;
 				break;
 		}
-		system("pause");
+		cout << endl;
 	}
-	
+
 	return 0;
 }
 {%endace%}
-
-___
 
 ### 練習 11-1
 
@@ -217,6 +217,3 @@ function 必須寫在 struct 裡面。
 * 印出所有資料
 	* 一筆一筆印出 number 和 name
 * 刪除所有資料
-   
-___
-
