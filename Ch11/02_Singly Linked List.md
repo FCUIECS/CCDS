@@ -85,7 +85,7 @@ void insert_node(Data node1, Data node2)
 void remove_node(Data n)
 {
 	//宣告一指標指向 n 的下一個節點
-	Data temp = n->next;
+	Data* temp = n->next;
 
 	//將 n 指向下下一個節點
     n->next = n->next->next;
