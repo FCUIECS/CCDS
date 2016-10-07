@@ -18,6 +18,7 @@ int d = -2147483647;
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 printf("%d\n", num);
 {%endace%}
+
 然而，光一個整數就有許許多多不同的表達方式，例如：八進位、十六進位等等，因此簡單列了個表格說明：
 
 |  格式控制字元 |          意義           |
