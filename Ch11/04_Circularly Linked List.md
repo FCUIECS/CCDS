@@ -11,16 +11,16 @@
 
 非常簡單，新增節點時把 next 指標指向 head 就可以了！
 
-___
+
 
 ### 練習 11-4
 
-請設計一個 循環 Linked List 程式，節點結構為：
+請設計一個 循環 Linked List 程式，需要有建構子以及get方法，節點結構為：
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-typedef struct data{
+struct Data{
     int number;
-    struct data *next;
-}DATA;
+    Data *next;
+};
 {%endace%}
 
 有選單，可以用以下功能：
@@ -56,5 +56,3 @@ Fig.(1)
 
 Fig.(2)  
 ![F2.png](img/F2.png)  
-
-___

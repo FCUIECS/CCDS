@@ -14,11 +14,11 @@
 加上一個指標就行了。
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-typedef struct data{
+struct Data{
     int number;
-    struct data *next;
-    struct data *prev;
-}DATA;
+    Data *next;
+    Data *prev;
+};
 {%endace%}
 
 至於其他的方法，就要多增加一些程式碼，像是新增、刪除。  
@@ -28,24 +28,23 @@ ___
 
 ### 練習 11-3
 
-請設計一個 雙向 Linked List 程式，節點結構為：
+請設計一個 雙向 Linked List 程式，需要有建構子以及get方法，節點結構為：
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-typedef struct data{
+struct Data{
     int number;
-    struct data *next;
-    struct data *prev;
-}DATA;
+    Data *next;
+    Data *prev;
+};
 {%endace%}
 
 有選單，可以用以下功能：
 
 * 新增資料
-	* 在最後面新增一筆資料
+	* 在最後面新增一筆資料。
 * 刪除
-	* 輸入要刪除的位置，執行刪除
+	* 輸入要刪除的位置，執行刪除。
 * 印出所有資料
-	* 一筆一筆印出 number 和 name
+	* 一筆一筆印出 number。
 * 印出第n個節點以及前後節點的資料
 
 第4個功能，例如輸入5，則印出4,5,6節點的資料。如果沒有，就印出錯誤。  
-___

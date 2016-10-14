@@ -9,42 +9,49 @@ C 當中的 malloc()，在 C++ 中我們用 new 來代替。
 
 ### A. 定義節點
 首先我們必須先定義每個 節點（Node） 到底長什麼樣子。  
-如同以下的程式碼，我們定義一個 data 節點，裡面有 int 型態的資料以及 data 型態的指標。
+如同以下的程式碼，我們定義一個 data 節點，裡面有 int 型態的資料以及 Data 型態的指標，以及get方法。
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-typedef struct data{
+struct Data{
     int number;
-    struct data *next;
-}DATA;
+    Data *next;
+
+	int getData() {
+		return this->number;
+	}
+};
 {%endace%}
 
 ### B. 定義必要的指標
 接著我們需要至少兩個指標，用來實作 Linked List 的各種功能。  
-這兩個指標一個是 head，另一個是 current。head 永遠指向第一個節點，而 current 則是作為各種功能的定位點。
+這兩個指標一個是 head，另一個是 current。head 永遠指向第一個節點，而 current 則是作為各種功能的定位點。不過current可以實作在方法裡面，也可以宣告為全域。
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 DATA *head    = NULL;
-DATA *current = NULL;
 {%endace%}
 
 ### C. 生成節點的方式
 我們要開始來生成節點了。假如今天有一筆新的資料被加入，我們應該怎麼做呢？  
 寫一個生成 function，向系統要一塊記憶體空間，然後把指標回傳。
+不過，在C++裡面，我們可以直接用struct的建構子來搞定。
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-DATA* create_node(int number) {
+struct Data{
+    int number;
+    Data *next;
 
-	//宣告一個 DATA 型態的指標，指向 malloc 跟系統要到的記憶體空間。
-    DATA *tempPointer = new struct data;
+    Data(int number) {
+   	    this->number = number;
+	    this->next = NULL;
+	}
 
-    //將資料放進剛拿到的空間，指向下一個節點的指標設為 null
-    n->number = number;
-    n->next = NULL;
-
-    //回傳指標
-    return tempPointer;
-}
+	int getData() {
+		return this->number;
+	}
+};
 {%endace%}
+
+
 
 ### D. 使用 Linked List 作插入
 
@@ -56,7 +63,7 @@ DATA* create_node(int number) {
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 //把 node2 塞到 node1 後面。
-void insert_node(DATA* node1, DATA* node2)
+void insert_node(Data node1, Data node2)
 {
     node2->next = node1->next;
     node1->next = node2;
@@ -74,11 +81,11 @@ void insert_node(DATA* node1, DATA* node2)
 ![linked-list-del.png](img/linked-list-del.png)
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-//刪除 n 的下一個 node 
-void remove_node(DATA* n)
+//刪除 n 的下一個 node
+void remove_node(Data* n)
 {
 	//宣告一指標指向 n 的下一個節點
-	DATA* temp = n->next;
+	Data* temp = n->next;
 
 	//將 n 指向下下一個節點
     n->next = n->next->next;
@@ -90,53 +97,64 @@ void remove_node(DATA* n)
 
 ### F. 印出所有資料
 
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-void printAll(DATA* head) {
-	while(head->next != NULL) {
-		cout << head->number << endl;
+void printAll() {
+	Data* temp = head;
+	cout << "Data :" << endl;
+	while(temp->next != NULL) {
+		cout << temp->getData() << "->" ;
+		temp = temp->next;
 	}
-	cout << head->number << endl;
+	cout << temp->getData() << endl;
 }
 {%endace%}
 
 ## 2. Examples 範例
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-typedef struct data{
+#include <iostream>
+#include <stdlib.h>
+
+using namespace std;
+
+struct Data{
     int number;
-    struct data *next;
+    Data *next;
 
-    DATA* create_node(int number) {
-	    DATA *tempPointer = malloc(sizeof(DATA));
-	    n->number = number;
-	    n->next = NULL;
-	    return tempPointer;
+    Data(int number) {
+   	  	this->number = number;
+	    this->next = NULL;
 	}
 
-	void createNewDataAtLast(int number) {
-		current = head;
-		if(head == null) {
-			head = create_node(number);
-		} else {
-			while(current->next != NULL) {
-				current = current->next;
-			}
-			current->next = create_node(number);
+	int getData() {
+		return this->number;
+	}
+};
+
+Data *head    = NULL;
+
+void printAll() {
+	Data* temp = head;
+	cout << "Data :" << endl;
+	while(temp->next != NULL) {
+		cout << temp->getData() << "->" ;
+		temp = temp->next;
+	}
+	cout << temp->getData() << endl;
+}
+
+void createNewDataAtLast(int number) {
+	Data* temp = head;
+	if(head == NULL) {
+		head = new Data(number);
+	} else {
+		while(temp->next != NULL) {
+			temp = temp->next;
 		}
+		temp->next = new Data(number);
 	}
-
-	void printAll(DATA* head) {
-		if(head == null) return;
-		while(head->next != NULL) {
-			cout << head->number << endl;
-		}
-		cout << head->number << endl;
-	}
-
-}DATA;
-
-DATA *head    = NULL;
-DATA *current = NULL;
+}
 
 int main(int argc, char const *argv[])
 {
@@ -145,10 +163,8 @@ int main(int argc, char const *argv[])
 		cout << "Choose the function you want :" << endl;
 		cout << "1. Add data" << endl;
 		cout << "2. Print All datas" << endl;
-		cout << "3. Exit"
-		cint >> choice;
-
-		system("cls");
+		cout << "3. Exit" << endl;
+		cin >> choice;
 
 		switch(choice) {
 			case 1:
@@ -159,7 +175,7 @@ int main(int argc, char const *argv[])
 				cout << "Add data successfully!" << endl;
 				break;
 			case 2:
-				printAll(head);
+				printAll();
 				break;
 			case 3:
 				exit(0);
@@ -167,24 +183,21 @@ int main(int argc, char const *argv[])
 				cout << "Error!" << endl;
 				break;
 		}
-		system("pause");
+		cout << endl;
 	}
-	
 	return 0;
 }
 {%endace%}
 
-___
-
 ### 練習 11-1
 
-請設計一個 Linked List 程式，節點結構為：
+請設計一個 Linked List 程式，需要有建構子以及get方法，節點結構為：
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-typedef struct data{
+struct Data{
     int number;
     string name;
-    struct data *next;
-}DATA;
+    Data *next;
+};
 {%endace%}
 
 function 必須寫在 struct 裡面。  
@@ -217,6 +230,3 @@ function 必須寫在 struct 裡面。
 * 印出所有資料
 	* 一筆一筆印出 number 和 name
 * 刪除所有資料
-   
-___
-

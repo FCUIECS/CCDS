@@ -32,36 +32,46 @@ long a = 2147483648;
 答案是「可以」，只是有些小地方需要你特別注意！  
 在 64 位元的系統上，一個 long 會各自表述，最大的差別在 Windows 及所有 Unix 及類 Unix 系統上，前者一樣是 4 bytes，後者則是 8 bytes！  
 因此，在 Windows 上，如果你輸入的是這串：
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 long a = 9876543210;
 long int b = 9876543210;
 {%endace%}
-那麼你可能會收到編譯器的警告，因為它超過 4 bytes 所能儲存的範圍，也就是發生了**溢位**！  
+
+那麼你可能會收到編譯器的警告，因為它超過 4 bytes 所能儲存的範圍，也就是發生了 **溢位**！  
 你必須改成這樣寫才行：
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 long long int a = 9876543210;
 {%endace%}
+
 而在 Unix 及所有類 Unix 的系統上，不用擔心這個問題，你用哪個都一樣。  
 既然前面都這麼麻煩了，那輸出肯定也是個苦差事！  
 當你今天使用 long 或 long int 宣告時，你必須這樣寫：
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 printf("%ld", num);
 {%endace%}
+
 不過，如果你是寫 long long int，那你就得要加上一個 l：
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 printf("%lld", num);
 {%endace%}
 
 > **如果不在 long 後面指定型態，預設使用 int。**
 
-還有，浮點數也可以加上 long 來修飾，變成更長的浮點數！  
+還有，浮點數也可以加上 long 來修飾，變成更長的浮點數！
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 long double e = 3.1415926;
 printf("%Lf", e);
 {%endace%}
-至於他總共佔用幾 bytes？當然是 16 bytes 囉！  
-> **long double 在 C99 才能正常使用。**
 
+至於他總共佔用幾 bytes？當然是 16 bytes 囉！  
+
+> **long double 在 C99 才能正常使用。**  
+  
 ## unsigned
 有時候我們不需要正負號，當我們可以另外處理正負號的時候，我們便可以使用 unsigned 來取消正負號。  
 unsigned，中文稱為「無號的」，是一個將有號型態變成無號型態的修飾詞，通常會用來使該型態能儲存的值變成兩倍，只能用在 int 及 char。  
