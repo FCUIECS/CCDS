@@ -74,6 +74,7 @@ int main(){
     return 0;
 }
 {%endace%}
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 #include <string>
@@ -129,6 +130,7 @@ int main(){
     return 0;
 }
 {%endace%}
+
 以上作法為我們宣告了一個指標陣列，然後用`new`把物件放進陣列中，此種寫法要記得寫delete。
 ### 範例10-20
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
@@ -165,6 +167,9 @@ int main(){
     return 0;
 }
 {%endace%}
+
 10-20的作法為宣告一個雙指標的變數，然後用分別`new`指標陣列及物件把物件放進陣列中，此種寫法要記得將雙指標的變數也`delete`掉。
 
 10-20的作法會較佳，如果有新的陣列要建立可以直接使用該變數，而不用額外宣告一個指標陣列。
+
+### 練習
