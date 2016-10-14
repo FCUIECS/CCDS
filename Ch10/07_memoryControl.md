@@ -13,6 +13,7 @@
 使用符號`*`可以將儲存位址的值取出，使用符號`&`可以將本地位址取出。請參考範例10-16
 
 ### 範例10-16
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 #include <string>
@@ -32,6 +33,7 @@ int main(){
 陣列也是指標的應用之一，請參考範例10-17
 
 ### 範例10-17
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 #include <string>
@@ -59,6 +61,7 @@ int main(){
 另外，關於函式(function)中的參數，我們也可以放上指標，呼叫時就會傳位址給函式，這時我們在函式中改動值會影響到該參數，請比較範例10-18兩個程式。
 
 ### 範例10-18
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 #include <string>
@@ -97,6 +100,7 @@ int main(){
 ## struct-array by pointer
 
 ### 範例10-19
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 #include <string>
@@ -133,6 +137,7 @@ int main(){
 
 以上作法為我們宣告了一個指標陣列，然後用`new`把物件放進陣列中，此種寫法要記得寫delete。
 ### 範例10-20
+
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 #include <iostream>
 #include <string>
@@ -173,3 +178,4 @@ int main(){
 10-20的作法會較佳，如果有新的陣列要建立可以直接使用該變數，而不用額外宣告一個指標陣列。
 
 ### 練習
+請定義學生資料，含有座號與姓名，並讓使用者輸入學生資料及印出所有學生資料。
