@@ -86,7 +86,7 @@ bool isFull() {
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 // 宣告物件
-Stack stack = new Stack();
+Stack *stack = new Stack();
 // 新增資料
 stack->push(10);
 // 刪除資料

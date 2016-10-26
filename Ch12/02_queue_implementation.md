@@ -97,7 +97,7 @@ bool isFull() {
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 // 宣告物件
-Queue queue = new Queue();
+Queue *queue = new Queue();
 // 新增資料
 queue->push(10);
 // 刪除資料
