@@ -12,4 +12,4 @@
 * [佇列簡介](01_queue_intro.md)
 * [實作Queue](02_queue_implementation.md)
 * [堆疊簡介](03_stack_intro.md)
-* [實作Stack]()
+* [實作Stack](04_stack_implementation.md)
