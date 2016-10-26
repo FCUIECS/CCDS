@@ -59,7 +59,7 @@
   * [雙向鏈結串列](Ch11/03_Doubly Linked List.md)
   * [循環鏈結串列](Ch11/04_Circularly Linked List.md)
 * [陰陽一氣 Queue & Stack](Ch12/Intro.md)
-  * [佇列簡介](Ch12/01_queue_intro,md)
+  * [佇列簡介](Ch12/01_queue_intro.md)
   * [實作Queue](Ch12/02_queue_implement.md)
   * [堆疊簡介](Ch12/03_stack_intro.md)
   * [實作Stack]()
