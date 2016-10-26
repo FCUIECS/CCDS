@@ -17,7 +17,7 @@ sturct Queue{
 Queue(){
     this->length = 0;
     for(int i=0; i< 100; i++) {
-      data[i] = 0;
+        data[i] = 0;
     }
 };
 {%endace%}
@@ -28,7 +28,7 @@ Queue(){
 void push(int num) {
     bool success = false;
     if (this->length >= 0 && this->length < 100) {
-        this->data[i] = num;
+        this->data[this->length] = num;
         success = true;
     }
     if (success) {
@@ -44,7 +44,7 @@ void push(int num) {
 void pop() {
     bool success = false;
     if (this->length > 0) {
-        for(int i=1; i<99; i++) {
+        for(int i=1; i<100; i++) {
             this->data[i-1] = this->data[i];
         }
         this->data[99] = 0;
@@ -99,19 +99,19 @@ bool isFull() {
 // 宣告物件
 Queue queue = new Queue();
 // 新增資料
-queue.push(10);
+queue->push(10);
 // 刪除資料
-queue.pop();
+queue->pop();
 // 取得前端資料
-queue.front();
+queue->front();
 // 取得後端資料
-queue.rear();
+queue->rear();
 // 取得佇列長度
-quere.size();
+quere->size();
 // 檢查佇列是否為空
-queue.isEmpty();
+queue->isEmpty();
 // 檢查佇列是否滿了
-queue.isFull();
+queue->isFull();
 {%endace%}
 
 ## 以Linked List實作
