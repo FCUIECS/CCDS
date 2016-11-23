@@ -63,6 +63,7 @@
   * [實作Queue](Ch12/02_queue_implementation.md)
   * [堆疊簡介](Ch12/03_stack_intro.md)
   * [實作Stack](Ch12/04_stack_implementation.md)
+  * [練習](Ch12/05_practice.md)
 * [木葉旋風 Tree](Ch13/Intro.md)
   * [各種樹簡介]()
   * [樹的走訪]()
