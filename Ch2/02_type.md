@@ -39,10 +39,10 @@ printf("%X\n", 10); // A
 
 ## float
 float，中文稱為「浮點數」，用比較耳熟能詳的單字就是「小數」，負責去儲存0.1、-1.2、0.0這種帶有小數點的數字。  
-在C語言中，float是一個單精度浮點數，一個floar變數就是占用 4 bytes 的記憶體空間，通常小數點後六位之後的問算都可能會有誤差。  
+在C語言中，float是一個單精度浮點數，一個float變數就是占用 4 bytes 的記憶體空間，通常小數點後六位之後的問算都可能會有誤差。  
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 float a = 0.1;
-floar b = -1.2;
+float b = -1.2;
 float c = 0.0;
 {%endace%}
 
