@@ -160,7 +160,6 @@ int main ()
 當執行getc( )函數成功時，傳回值是所讀取的字元，如果所讀取的是檔案結束字元，則此值是EOF，在stdio.h內，此值是 -1。
 
 ```C
-/* getc example: money counter */
 #include <stdio.h>
 int main ()
 {
