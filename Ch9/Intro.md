@@ -158,3 +158,25 @@ int main ()
  
  
 當執行getc( )函數成功時，傳回值是所讀取的字元，如果所讀取的是檔案結束字元，則此值是EOF，在stdio.h內，此值是 -1。
+
+```C
+/* getc example: money counter */
+#include <stdio.h>
+int main ()
+{
+  FILE * pFile;
+  int c;
+  
+  pFile=fopen ("alphabet.txt","r");
+  if (pFile==NULL) perror ("Error opening file");
+  else
+  {
+    do {
+      c = getc (pFile);
+      printf("%c",c);
+    } while (c != EOF);
+    fclose (pFile);
+  }
+  return 0;
+}
+```
