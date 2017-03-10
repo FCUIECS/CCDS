@@ -69,16 +69,16 @@ C本身提供了許多檔案的輸入與輸出，以方便使用者設計與檔�
 範例:
 ```C
 #include <stdio.h>
- 
-void main()
+
+int main()
 {
     FILE *fp;
     int  var,i;
     int  sum = 0;
     float average;
     fp = fopen("data1.txt","w");     /* open file pointer */
-   
-for ( i = 0; i < 5; i++ )
+
+    for ( i = 0; i < 5; i++ )
     {
        printf("\1: input number %d here ==>  ",i+1);
        scanf("%d",&var);
@@ -88,6 +88,8 @@ for ( i = 0; i < 5; i++ )
     average = (float) sum / 5.0;
     fprintf(fp,"\2: The average is %6.2f",average);
     fclose(fp);
+    
+    return 0; 
 }
 ```
 
@@ -104,23 +106,20 @@ fscanf( )函數和scanf( )函數兩者之間最大的差別在，scanf( )函數�
 範例:
 ```C
 #include <stdio.h>
- 
-void main()
+
+int main()
 {
     FILE *fp;
-    int  i,j,var;
-    fp = fopen("data2.txt","r");     /* open file pointer */
-  
-for ( i = 0; i < 5; i++ )
+    int i,var;
+    fp = fopen("data1.txt","r");     /* open file pointer */
+
+	   for ( i = 0; i < 5; i++ )
     {
-       for ( j = 0; j < 5; j++ )
-       {
-        fscanf(fp,"%d",&var);
-        printf("%c",var);
-       }
-       printf("\n");
+         fscanf(fp,"%d",&var);
+         printf("%d\n",var);
     }
     fclose(fp);
+    return 0;
 }
 ```
 
@@ -134,17 +133,20 @@ for ( i = 0; i < 5; i++ )
 下列為一個簡單建立一個檔案的程式應用。
 
 ```C
+/* putc example: alphabet writer */
 #include <stdio.h>
-void main()
-{  FILE *fp;
-    char ch;
-    fp = fopen("sample.txt","w");
-    /*開啟一個文字檔(sample.txt)，供程式將資料寫入此檔案內*/
-    printf("\1: Please input text here. \n");
-    while ( (ch = getche()) != '\r' )
-       putc(ch,fp); /* 將讀入之字元輸出所設定的sample.txt檔案內*/
-          
-    fclose(fp);  /*關閉指標為fp之檔案 */
+
+int main ()
+{
+  FILE * pFile;
+  char c;
+
+  pFile=fopen("alphabet.txt","wt");
+  for (c = 'A' ; c <= 'Z' ; c++) {
+    putc (c , pFile);
+    }
+  fclose (pFile);
+  return 0;
 }
 ```
 
