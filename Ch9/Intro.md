@@ -113,7 +113,7 @@ int main()
     int i,var;
     fp = fopen("data1.txt","r");     /* open file pointer */
 
-	   for ( i = 0; i < 5; i++ )
+    for ( i = 0; i < 5; i++ )
     {
          fscanf(fp,"%d",&var);
          printf("%d\n",var);
