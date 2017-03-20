@@ -35,8 +35,8 @@ free(b);
 以下都採用 ``Student *a`` 作為範例：  
 ```c++
 // 輸入
-scanf("%s", &(*a).name);
-scanf("%s", &a->name);
+scanf("%s", (*a).name);
+scanf("%s", a->name);
 // 賦值
 strcpy((*a).name, "Danny");
 strcpy(a->name, "Danny");

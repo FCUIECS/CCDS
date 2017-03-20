@@ -19,7 +19,7 @@ int main() {
 當我們想要存取 s 的 name（名字）的時候，就可以這樣寫：  
 ```c++
 // 輸入
-scanf("%s", &s.name);
+scanf("%s", s.name);
 // 賦值
 strcpy(s.name, "Danny");
 // 輸出
@@ -148,7 +148,7 @@ Student s= {
      .average = 82.666666
  };
 // 輸入
-scanf("%s", &s.name);
+scanf("%s", s.name);
 // 賦值
 strcpy(s.name, "Danny");
 // 輸出
