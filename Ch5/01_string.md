@@ -112,7 +112,7 @@ int main(){
 }
 {%endace%}
 
-strcpy會讓str的資料等於str2的資料，並非直接寫`str2 = str;`，後者使str2和str存取同一個陣列，而非複製出另一個相同的字串。
+strcpy會讓str的資料等於str2的資料，並非直接寫`str = str2;`，後者使str2和str存取同一個陣列，而非複製出另一個相同的字串。
 
 ### strcat
 
