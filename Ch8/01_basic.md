@@ -40,7 +40,7 @@ struct Student {
     int chinese_score;
     int math_score;
     int english_score;
-    double student_average;
+    double average;
 } stu[100];
 ```
 其中，Student 就是 tag，中間所有的變數就是 member-list（成員列表），而 stu[100] 就是宣告的 variable-list 。  
