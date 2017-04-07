@@ -10,7 +10,7 @@ struct Student {
     int chinese_score;
     int math_score;
     int english_score;
-    double student_average;
+    double average;
 };
 int main() {
     struct Student s;
@@ -84,7 +84,7 @@ int main() {
 又或者，你可以連回傳都不要，讓函式計算完直接幫你塞回去：  
 ```c++
 double calc_average(struct Student *stu) {
-    stu.average = (stu.chinese_score + stu.math_score + stu.english_score) / 3.0;
+    stu->average = (stu->chinese_score + stu->math_score + stu->english_score) / 3.0;
 }
 
 int main() {
