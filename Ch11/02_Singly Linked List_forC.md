@@ -27,7 +27,6 @@ Data *head = NULL;
 ### C. 生成節點的方式
 我們要開始來生成節點了。假如今天有一筆新的資料被加入，我們應該怎麼做呢？  
 寫一個生成 function，向系統要一塊記憶體空間，然後把指標回傳。
-不過，在C++裡面，我們可以直接用struct的建構子來搞定。
 
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 Data* createNewNode(int number) {
@@ -61,7 +60,6 @@ void insert_node(Data* node1, Data* node2)
 
 用 malloc 要來的記憶體空間會放在 heap 而不是 stack，所以不會隨著 function 結束釋放，
 必須要用 free() 釋放掉，否則會造成 memory leak。  
-但在 C++ 中利用 new 就不必這樣做，我們改成用 delete 將其刪除。
 
 刪除時的運作方式：  
 
@@ -188,7 +186,7 @@ int main(int argc, char const *argv[])
 
 ### 練習 11-1
 
-請設計一個 Linked List 程式，需要有建構子以及get方法，節點結構為：
+請設計一個 Linked List 程式，節點結構為：
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
 struct Data{
     int number;
