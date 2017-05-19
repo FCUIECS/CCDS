@@ -187,10 +187,10 @@ int main(int argc, char const *argv[])
 
 請設計一個 Linked List 程式，節點結構為：
 {%ace edit=false, lang='c_cpp', theme='monokai'%}
-struct Data{
+struct data{
     int number;
-    string name;
-    Data *next;
+    char name[20];
+    struct data *next;
 };
 {%endace%}
 
