@@ -137,7 +137,7 @@ void createNewDataAtLast(int number) {
 void printDataAfterNode(Data* start) {
     printf("Data : \n");
     while(start->next != NULL) {
-        printf("%d->", temp->number);
+        printf("%d->", start->number);
         start = start->next;
     } 
     printf("%d \n", start->number);
