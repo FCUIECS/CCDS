@@ -181,7 +181,6 @@ int main(int argc, char const *argv[])
     }
     return 0;
 }
-}
 {%endace%}
 
 ### 練習 11-1
