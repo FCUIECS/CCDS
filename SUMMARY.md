@@ -59,7 +59,7 @@
 * [人形蜈蚣 Linked List](Ch11/01_Intro.md)
   * [單向鏈結串列](Ch11/02_Singly Linked List.md)
   * [雙向鏈結串列](Ch11/03_Doubly Linked List.md)
-  * [循環鏈結串列](Ch11/04_Circularly Linked List.md)
+  * [循環鏈結串列](Ch11/04_Circularly Linked List.md)  
   * [單向鏈結串列（For C）](Ch11/02_Singly Linked List_forC.md)
   * [雙向鏈結串列（For C）](Ch11/03_Doubly Linked List_forC.md)
   * [循環鏈結串列（For C）](Ch11/04_Circularly Linked List_forC.md)
