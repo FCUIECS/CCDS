@@ -5,7 +5,7 @@ python: 3.7
 
 install:
   - curl --silent -o 'latest_hugo' https://api.github.com/repos/gohugoio/hugo/releases/latest
-  - TARGET=$(cat 'latest_hugo' | grep -o 'https\:\/\/github\.com\/gohugoio\/hugo\/releases\/download\/[v\.\d]+\/hugo\_extended_[v\.\d]+_Linux\-64bit\.deb')
+  - TARGET=$(cat 'latest_hugo' | grep -oP 'https\:\/\/github\.com\/gohugoio\/hugo\/releases\/download\/[v\.\d]+\/hugo\_extended_[v\.\d]+_Linux\-64bit\.deb')
   - curl -O $TARGET
   - sudo dpkg -i hugo*.deb
   - hugo version
