@@ -1,9 +1,13 @@
+root: linux
 dist: bionic
 language: python
 python: 3.7
 
 install:
-  - curl -O $(curl https://api.github.com/repos/gohugoio/hugo/releases/latest | sed -r -n '/browser_download_url/{/Linux-64bit.deb/{s@[^:]*:[[:space:]]*"([^"]*)".*@\1@g;p;q}}')
+  - sudo apt-get -y install jq
+  - TARGET=$(curl --silent https://api.github.com/repos/gohugoio/hugo/releases/latest)
+  - TARGET=$(echo $TARGET | grep -o 'https\:\/\/github\.com\/gohugoio\/hugo\/releases\/download\/[v\.\d]+\/hugo\_extended_[v\.\d]+_Linux\-64bit\.deb')
+  - curl -O $TARGET
   - sudo dpkg -i hugo*.deb
   - hugo version
 
@@ -12,11 +16,12 @@ script:
 
 # 构建完成后会自动更新Github Pages
 deploy:
+  strategy: git
   provider: pages
-  skip-cleanup: true
-  local-dir: public
-  target-branch: gh-pages
-  github-token: $GITHUB_TOKEN
-  keep-history: true
+  skip_cleanup: true
+  local_dir: public
+  target_branch: gh-pages
+  token: $GITHUB_TOKEN
+  keep_history: true
   on:
     branch: master
