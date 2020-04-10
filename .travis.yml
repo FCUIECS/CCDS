@@ -4,7 +4,6 @@ language: python
 python: 3.7
 
 install:
-  - sudo apt-get -y install jq
   - TARGET=$(curl --silent https://api.github.com/repos/gohugoio/hugo/releases/latest)
   - TARGET=$(echo $TARGET | grep -o 'https\:\/\/github\.com\/gohugoio\/hugo\/releases\/download\/[v\.\d]+\/hugo\_extended_[v\.\d]+_Linux\-64bit\.deb')
   - curl -O $TARGET
