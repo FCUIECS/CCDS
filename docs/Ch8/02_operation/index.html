@@ -1,0 +1,110 @@
+<!doctype html><html lang=zh><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="結構操作 一般的結構變數，可以直接將結構變數當成一般變數來使用。 成員取值 如果我們想要取得一個結構變數中的成員的值，可以運用「 . 」這個運算子，以"><meta property="og:title" content><meta property="og:description" content="結構操作 一般的結構變數，可以直接將結構變數當成一般變數來使用。 成員取值 如果我們想要取得一個結構變數中的成員的值，可以運用「 . 」這個運算子，以"><meta property="og:type" content="article"><meta property="og:url" content="https://fcuiecs.github.io/ccds/docs/Ch8/02_operation/"><meta property="article:modified_time" content="2020-04-10T13:58:09+08:00"><title>02 Operation | C & C++ & Data Structure Texture Lecture</title><link rel=icon href=https://fcuiecs.github.io/ccds/favicon.png type=image/x-icon><link rel=stylesheet href=https://fcuiecs.github.io/ccds/book.min.eec4362743e12b4651e54612f281492e02ee70367d7677d18cb7588c0cf7c6d7.css integrity="sha256-7sQ2J0PhK0ZR5UYS8oFJLgLucDZ9dnfRjLdYjAz3xtc="><script defer src=https://fcuiecs.github.io/ccds/zh.search.min.1a08fa53686feb65f4c9921a5ad0795a6f44273911927c3b3c60fbda1eb539f3.js integrity="sha256-Ggj6U2hv62X0yZIaWtB5Wm9EJzkRknw7PGD72h61OfM="></script></head><body><input type=checkbox class=hidden id=menu-control><main class="container flex"><aside class=book-menu><nav><h2 class=book-brand><a href=https://fcuiecs.github.io/ccds/><span>C & C++ & Data Structure Texture Lecture</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder aria-label maxlength=64 data-hotkeys=s/><div class="book-search-spinner spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=https://fcuiecs.github.io/ccds/docs/><strong>開卷</strong></a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch0/Intro/><strong>魔工鑄器 Environment</strong></a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch0/01_devcpp/>Dev-C++</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch0/02_codeblocks/>Code::Blocks</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch0/03_visualstudio/>Visual Studio</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch1/Intro/><strong>鑑往知來 C Intro</strong></a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch1/01_history/>C語言背景</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch1/02_language_diff/>低中高階語言</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch1/03_spec/>C語言特性</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch1/04_newbie/>起手式</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch1/05_practice/>練習</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch2/Intro/><strong>五型殺氣 Basic I/O</strong></a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch2/01_stdout/>標準輸出</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch2/02_type/>基本五型</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch2/03_changable/>伸縮自如的型態</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch2/04_stdin/>標準輸入</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch2/05_practice/>練習</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch3/Intro/><strong>扮裝行列 Operation</strong></a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch3/01_arithmetic/>算數運算</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch3/02_bitComputing/>位元運算</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch3/03_assignment/>指派運算</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch3/04_boolean/>布林運算</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch3/05_ifStatement/>判斷式</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch3/06_practice/>練習</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch4/Intro/><strong>循環演算 Loop & Array</strong></a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch4/01_loop/>迴圈簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch4/02_array/>陣列簡介</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch5/Intro/><strong>情報強化 String</strong></a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch5/01_string/>字串簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/>字串處理</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch5/02_bignumber/>大數運算</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch6/Intro/><strong>三千世界 Function</strong></a><ul><li><a href=https://fcuiecs.github.io/ccds/>函式簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/>參數傳遞(Call by value)</a></li><li><a href=https://fcuiecs.github.io/ccds/>遞迴</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch7/Intro/>鬼門遁甲 Pointer</a><ul><li><a href=https://fcuiecs.github.io/ccds/>指標簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/>參數傳遞(Call by address)</a></li><li><a href=https://fcuiecs.github.io/ccds/>動態記憶體操作</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch8/Intro/>七夜怪談 Structure</a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch8/01_basic/>基礎結構</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch8/02_operation/ class=active>結構操作</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch8/03_ptr_structure/>結構指標</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch8/04_practice/>練習</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch9/Intro/>剪紙成兵 File I/O</a><ul><li><a href=https://fcuiecs.github.io/ccds/>檔案結構</a></li><li><a href=https://fcuiecs.github.io/ccds/>檔案輸入輸出</a></li><li><a href=https://fcuiecs.github.io/ccds/>檔案處理</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/Intro/>天元突破 C++ Intro</a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/01_introduction/>C++簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/02_inputAndOutput/>輸入&輸出</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/03_boolean/>第六型態</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/04_string/>字串(string)</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/05_TernaryOperator/>三元運算子</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/06_structAndObject/>結構與物件</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/07_memoryControl/>記憶體操作</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch11/01_Intro/>人形蜈蚣 Linked List</a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch11/02_Singly_Linked_List/>單向鏈結串列</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch11/03_Doubly_Linked_List/>雙向鏈結串列</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch11/04_Circularly_Linked_List/>循環鏈結串列</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch11/02_Singly_Linked_List_forC/>單向鏈結串列 For C</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch11/03_Doubly_Linked_List_forC/>雙向鏈結串列 For C</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch11/04_Circularly_Linked_List_forC/>循環鏈結串列 For C</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch12/Intro/>陰陽一氣 Queue & Stack</a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch12/01_queue_intro/>佇列簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch12/02_queue_implementation/>實作Queue</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch12/03_stack_intro/>堆疊簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch12/04_stack_implementation/>實作Stack</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch12/05_practice/>練習</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch13/Intro/>木葉旋風 Tree</a><ul><li><a href=https://fcuiecs.github.io/ccds/>各種樹簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/>樹的走訪</a></li><li><a href=https://fcuiecs.github.io/ccds/>前序/中序/後序轉換式</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch14/Intro/>木靈迷路 Graph</a><ul><li><a href=https://fcuiecs.github.io/ccds/>各種圖簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/>Kruskal</a></li><li><a href=https://fcuiecs.github.io/ccds/>Prime</a></li><li><a href=https://fcuiecs.github.io/ccds/>Dijkstra</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/summary/>總結</a></li></ul><ul><li><a href=https://github.com/FCUIECS/CCDS target=_blank rel=noopener>Github</a></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=https://fcuiecs.github.io/ccds/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>02 Operation</strong>
+<label for=toc-control><img src=https://fcuiecs.github.io/ccds/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><input type=checkbox class=hidden id=toc-control><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#結構操作>結構操作</a><ul><li><a href=#成員取值>成員取值</a></li><li><a href=#變數初始化>變數初始化</a></li><li><a href=#複製結構>複製結構</a></li><li><a href=#傳遞結構變數>傳遞結構變數</a></li><li><a href=#自定義型態>自定義型態</a></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=結構操作>結構操作</h1><p>一般的結構變數，可以直接將<strong>結構變數當成一般變數來使用</strong>。</p><h2 id=成員取值>成員取值</h2><p>如果我們想要取得一個結構變數中的成員的值，可以運用「 . 」這個運算子，以前一章的 Student 結構為例子：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Student</span> {
+    <span style=color:#66d9ef>char</span> name[<span style=color:#ae81ff>20</span>];
+    <span style=color:#66d9ef>char</span> sex;
+    <span style=color:#66d9ef>int</span> chinese_score;
+    <span style=color:#66d9ef>int</span> math_score;
+    <span style=color:#66d9ef>int</span> english_score;
+    <span style=color:#66d9ef>double</span> average;
+};
+<span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>() {
+    <span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Student</span> s;
+}
+</code></pre></div><p>當我們想要存取 s 的 name（名字）的時候，就可以這樣寫：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=color:#75715e>// 輸入
+</span><span style=color:#75715e></span>scanf(<span style=color:#e6db74>&#34;%s&#34;</span>, s.name);
+<span style=color:#75715e>// 賦值
+</span><span style=color:#75715e></span>strcpy(s.name, <span style=color:#e6db74>&#34;Danny&#34;</span>);
+<span style=color:#75715e>// 輸出
+</span><span style=color:#75715e></span>printf(<span style=color:#e6db74>&#34;%s&#34;</span>, s.name);
+</code></pre></div><h2 id=變數初始化>變數初始化</h2><p>結構變數的初始化方法非常簡單，一樣在宣告的同時，運用<code>{ }</code>、<code>.</code>、<code>,</code>三者結合即可，範例如下：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Student</span> s <span style=color:#f92672>=</span> {
+    .name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Peter&#34;</span>,
+    .sex <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;M&#39;</span>,
+    .chinese_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>63</span>,
+    .math_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>98</span>,
+    .english_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>87</span>,
+    .average <span style=color:#f92672>=</span> <span style=color:#ae81ff>82.666666</span>
+};
+</code></pre></div><p>每個成員前面都要加<code>.</code>，成員之間則用<code>,</code>隔開，前後則用<code>{ }</code>夾起來。</p><h2 id=複製結構>複製結構</h2><p>結構變數跟一般變數具有相似性質，一般變數能做的，結構變數大多也能做，例如常見的「賦值」。<br>我們可以直接將已經有資料的結構變數，賦予給一個沒有資料的結構變數，如此一來就可以達到「複製」的效果。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Student</span> s <span style=color:#f92672>=</span> {
+    .name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Peter&#34;</span>,
+    .sex <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;M&#39;</span>,
+    .chinese_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>63</span>,
+    .math_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>98</span>,
+    .english_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>87</span>,
+    .average <span style=color:#f92672>=</span> <span style=color:#ae81ff>82.666666</span>
+}, t;
+t <span style=color:#f92672>=</span> s;
+</code></pre></div><p>此時，t 裡面的內容會跟 s 一模一樣，我們可以來檢查看看：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++>printf(<span style=color:#e6db74>&#34;%s</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>, s.name);
+printf(<span style=color:#e6db74>&#34;%s</span><span style=color:#ae81ff>\n</span><span style=color:#e6db74>&#34;</span>, t.name);
+</code></pre></div><p>各位也可以自行檢查其他成員的值是否相同。</p><h2 id=傳遞結構變數>傳遞結構變數</h2><p>結構變數也可以正常地丟進一般變數中，舉例來說，如果我想傳入一個 Student 結構變數去計算平均，我們可以這樣寫：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=color:#66d9ef>double</span> <span style=color:#a6e22e>calc_average</span>(<span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Student</span> stu) {
+    <span style=color:#66d9ef>return</span> (stu.chinese_score <span style=color:#f92672>+</span> stu.math_score <span style=color:#f92672>+</span> stu.english_score) <span style=color:#f92672>/</span> <span style=color:#ae81ff>3.0</span>;
+}
+
+<span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>() {
+    <span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Student</span> s <span style=color:#f92672>=</span> {
+        .name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Peter&#34;</span>,
+        .sex <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;M&#39;</span>,
+        .chinese_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>63</span>,
+        .math_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>98</span>,
+        .english_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>87</span>,
+        .average <span style=color:#f92672>=</span> <span style=color:#ae81ff>82.666666</span>
+    };
+    s.average <span style=color:#f92672>=</span> calc_average(s);
+    <span style=color:#75715e>// ...
+</span><span style=color:#75715e></span>}
+</code></pre></div><p>又或者，你可以連回傳都不要，讓函式計算完直接幫你塞回去：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=color:#66d9ef>double</span> <span style=color:#a6e22e>calc_average</span>(<span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Student</span> <span style=color:#f92672>*</span>stu) {
+    (<span style=color:#f92672>*</span>stu).average <span style=color:#f92672>=</span> ((<span style=color:#f92672>*</span>stu).chinese_score <span style=color:#f92672>+</span> (<span style=color:#f92672>*</span>stu).math_score <span style=color:#f92672>+</span> (<span style=color:#f92672>*</span>stu).english_score) <span style=color:#f92672>/</span> <span style=color:#ae81ff>3.0</span>;
+    <span style=color:#75715e>// Or
+</span><span style=color:#75715e></span>    <span style=color:#75715e>// stu-&gt;average = (stu-&gt;chinese_score + stu-&gt;math_score + stu-&gt;english_score) / 3.0;
+</span><span style=color:#75715e></span>}
+
+<span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>() {
+    <span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Student</span> s <span style=color:#f92672>=</span> {
+        .name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Peter&#34;</span>,
+        .sex <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;M&#39;</span>,
+        .chinese_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>63</span>,
+        .math_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>98</span>,
+        .english_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>87</span>,
+        .average <span style=color:#f92672>=</span> <span style=color:#ae81ff>82.666666</span>
+    };
+    calc_average(<span style=color:#f92672>&amp;</span>s);
+    <span style=color:#75715e>// ...
+</span><span style=color:#75715e></span>}
+</code></pre></div><h2 id=自定義型態>自定義型態</h2><p>有時候你會覺得<code>struct Student</code>打起來很長，用起來很煩、寫起來很煩，有沒有更簡單的寫法？<br>有，當然有，我們可以透過 <code>typedef</code> 來自定義型態，typedef的定義如下：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=color:#66d9ef>typedef</span> <span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>tag</span> { member<span style=color:#f92672>-</span>list } type<span style=color:#f92672>-</span>name ; 
+</code></pre></div><p>舉例來說，以上面的 Student 結構來講，我們可以自定義一個 Student 型態：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=color:#66d9ef>typedef</span> <span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>_Student</span> {
+    <span style=color:#66d9ef>char</span> name[<span style=color:#ae81ff>20</span>];
+    <span style=color:#66d9ef>char</span> sex;
+    <span style=color:#66d9ef>int</span> chinese_score;
+    <span style=color:#66d9ef>int</span> math_score;
+    <span style=color:#66d9ef>int</span> english_score;
+    <span style=color:#66d9ef>double</span> student_average;
+} Student;
+</code></pre></div><p>而此時我們可以透過型態來宣告變數，也可以透過結構來宣告變數：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++><span style=color:#75715e>// 這兩個宣告出來的東西是一樣的
+</span><span style=color:#75715e></span>Student a;
+<span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>_Student</span> b;
+</code></pre></div><p>初始化方式和原本一樣，而且，這兩個變數也是可以互相等號（賦值）的：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++>Student a <span style=color:#f92672>=</span> {
+    .name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Peter&#34;</span>,
+    .sex <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;M&#39;</span>,
+    .chinese_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>63</span>,
+    .math_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>98</span>,
+    .english_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>87</span>,
+    .average <span style=color:#f92672>=</span> <span style=color:#ae81ff>82.666666</span>
+};
+<span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>_Student</span> b;
+b <span style=color:#f92672>=</span> a;
+</code></pre></div><p>存取方式也和結構變數一樣，利用<code>.</code>來做成員取值：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-c++ data-lang=c++>Student s<span style=color:#f92672>=</span> {
+     .name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Peter&#34;</span>,
+     .sex <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;M&#39;</span>,
+     .chinese_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>63</span>,
+     .math_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>98</span>,
+     .english_score <span style=color:#f92672>=</span> <span style=color:#ae81ff>87</span>,
+     .average <span style=color:#f92672>=</span> <span style=color:#ae81ff>82.666666</span>
+ };
+<span style=color:#75715e>// 輸入
+</span><span style=color:#75715e></span>scanf(<span style=color:#e6db74>&#34;%s&#34;</span>, s.name);
+<span style=color:#75715e>// 賦值
+</span><span style=color:#75715e></span>strcpy(s.name, <span style=color:#e6db74>&#34;Danny&#34;</span>);
+<span style=color:#75715e>// 輸出
+</span><span style=color:#75715e></span>printf(<span style=color:#e6db74>&#34;%s&#34;</span>, s.name);
+</code></pre></div></article><footer class=book-footer><div class="flex justify-between"><div><a class="flex align-center" href=https://github.com/FCUIECS/CCDS/commit/b8a4a3482129f425d4f388335a4ec697f9d367be title="Vongola | Apr 10, 2020" target=_blank rel=noopener><img src=https://fcuiecs.github.io/ccds/svg/calendar.svg class=book-icon alt=Calendar>
+<span>Apr 10, 2020</span></a></div></div></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><nav id=TableOfContents><ul><li><a href=#結構操作>結構操作</a><ul><li><a href=#成員取值>成員取值</a></li><li><a href=#變數初始化>變數初始化</a></li><li><a href=#複製結構>複製結構</a></li><li><a href=#傳遞結構變數>傳遞結構變數</a></li><li><a href=#自定義型態>自定義型態</a></li></ul></li></ul></nav></aside></main></body></html>

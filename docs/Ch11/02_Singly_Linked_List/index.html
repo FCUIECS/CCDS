@@ -1,0 +1,136 @@
+<!doctype html><html lang=zh><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="單向鏈結串列 Singly Linked List 1.Implementation 實作方向 在 C/C++ 當中，我們可以用 Struct（結構）來實作 Linked List。 在 C++ 當中，Struct 可以寫進方法，這個特性也讓我們實"><meta property="og:title" content><meta property="og:description" content="單向鏈結串列 Singly Linked List 1.Implementation 實作方向 在 C/C++ 當中，我們可以用 Struct（結構）來實作 Linked List。 在 C++ 當中，Struct 可以寫進方法，這個特性也讓我們實"><meta property="og:type" content="article"><meta property="og:url" content="https://fcuiecs.github.io/ccds/docs/Ch11/02_Singly_Linked_List/"><meta property="article:modified_time" content="2020-04-10T13:58:09+08:00"><title>02 Singly Linked List | C & C++ & Data Structure Texture Lecture</title><link rel=icon href=https://fcuiecs.github.io/ccds/favicon.png type=image/x-icon><link rel=stylesheet href=https://fcuiecs.github.io/ccds/book.min.eec4362743e12b4651e54612f281492e02ee70367d7677d18cb7588c0cf7c6d7.css integrity="sha256-7sQ2J0PhK0ZR5UYS8oFJLgLucDZ9dnfRjLdYjAz3xtc="><script defer src=https://fcuiecs.github.io/ccds/zh.search.min.1a08fa53686feb65f4c9921a5ad0795a6f44273911927c3b3c60fbda1eb539f3.js integrity="sha256-Ggj6U2hv62X0yZIaWtB5Wm9EJzkRknw7PGD72h61OfM="></script></head><body><input type=checkbox class=hidden id=menu-control><main class="container flex"><aside class=book-menu><nav><h2 class=book-brand><a href=https://fcuiecs.github.io/ccds/><span>C & C++ & Data Structure Texture Lecture</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder aria-label maxlength=64 data-hotkeys=s/><div class="book-search-spinner spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=https://fcuiecs.github.io/ccds/docs/><strong>開卷</strong></a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch0/Intro/><strong>魔工鑄器 Environment</strong></a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch0/01_devcpp/>Dev-C++</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch0/02_codeblocks/>Code::Blocks</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch0/03_visualstudio/>Visual Studio</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch1/Intro/><strong>鑑往知來 C Intro</strong></a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch1/01_history/>C語言背景</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch1/02_language_diff/>低中高階語言</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch1/03_spec/>C語言特性</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch1/04_newbie/>起手式</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch1/05_practice/>練習</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch2/Intro/><strong>五型殺氣 Basic I/O</strong></a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch2/01_stdout/>標準輸出</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch2/02_type/>基本五型</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch2/03_changable/>伸縮自如的型態</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch2/04_stdin/>標準輸入</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch2/05_practice/>練習</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch3/Intro/><strong>扮裝行列 Operation</strong></a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch3/01_arithmetic/>算數運算</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch3/02_bitComputing/>位元運算</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch3/03_assignment/>指派運算</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch3/04_boolean/>布林運算</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch3/05_ifStatement/>判斷式</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch3/06_practice/>練習</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch4/Intro/><strong>循環演算 Loop & Array</strong></a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch4/01_loop/>迴圈簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch4/02_array/>陣列簡介</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch5/Intro/><strong>情報強化 String</strong></a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch5/01_string/>字串簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/>字串處理</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch5/02_bignumber/>大數運算</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch6/Intro/><strong>三千世界 Function</strong></a><ul><li><a href=https://fcuiecs.github.io/ccds/>函式簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/>參數傳遞(Call by value)</a></li><li><a href=https://fcuiecs.github.io/ccds/>遞迴</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch7/Intro/>鬼門遁甲 Pointer</a><ul><li><a href=https://fcuiecs.github.io/ccds/>指標簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/>參數傳遞(Call by address)</a></li><li><a href=https://fcuiecs.github.io/ccds/>動態記憶體操作</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch8/Intro/>七夜怪談 Structure</a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch8/01_basic/>基礎結構</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch8/02_operation/>結構操作</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch8/03_ptr_structure/>結構指標</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch8/04_practice/>練習</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch9/Intro/>剪紙成兵 File I/O</a><ul><li><a href=https://fcuiecs.github.io/ccds/>檔案結構</a></li><li><a href=https://fcuiecs.github.io/ccds/>檔案輸入輸出</a></li><li><a href=https://fcuiecs.github.io/ccds/>檔案處理</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/Intro/>天元突破 C++ Intro</a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/01_introduction/>C++簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/02_inputAndOutput/>輸入&輸出</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/03_boolean/>第六型態</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/04_string/>字串(string)</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/05_TernaryOperator/>三元運算子</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/06_structAndObject/>結構與物件</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch10/07_memoryControl/>記憶體操作</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch11/01_Intro/>人形蜈蚣 Linked List</a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch11/02_Singly_Linked_List/ class=active>單向鏈結串列</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch11/03_Doubly_Linked_List/>雙向鏈結串列</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch11/04_Circularly_Linked_List/>循環鏈結串列</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch11/02_Singly_Linked_List_forC/>單向鏈結串列 For C</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch11/03_Doubly_Linked_List_forC/>雙向鏈結串列 For C</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch11/04_Circularly_Linked_List_forC/>循環鏈結串列 For C</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch12/Intro/>陰陽一氣 Queue & Stack</a><ul><li><a href=https://fcuiecs.github.io/ccds/docs/Ch12/01_queue_intro/>佇列簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch12/02_queue_implementation/>實作Queue</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch12/03_stack_intro/>堆疊簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch12/04_stack_implementation/>實作Stack</a></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch12/05_practice/>練習</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch13/Intro/>木葉旋風 Tree</a><ul><li><a href=https://fcuiecs.github.io/ccds/>各種樹簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/>樹的走訪</a></li><li><a href=https://fcuiecs.github.io/ccds/>前序/中序/後序轉換式</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/Ch14/Intro/>木靈迷路 Graph</a><ul><li><a href=https://fcuiecs.github.io/ccds/>各種圖簡介</a></li><li><a href=https://fcuiecs.github.io/ccds/>Kruskal</a></li><li><a href=https://fcuiecs.github.io/ccds/>Prime</a></li><li><a href=https://fcuiecs.github.io/ccds/>Dijkstra</a></li></ul></li><li><a href=https://fcuiecs.github.io/ccds/docs/summary/>總結</a></li></ul><ul><li><a href=https://github.com/FCUIECS/CCDS target=_blank rel=noopener>Github</a></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=https://fcuiecs.github.io/ccds/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>02 Singly Linked List</strong>
+<label for=toc-control><img src=https://fcuiecs.github.io/ccds/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><input type=checkbox class=hidden id=toc-control><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#單向鏈結串列-singly-linked-list>單向鏈結串列 Singly Linked List</a><ul><li><a href=#1implementation-實作方向>1.Implementation 實作方向</a><ul><li><a href=#a-定義節點>A. 定義節點</a></li><li><a href=#b-定義必要的指標>B. 定義必要的指標</a></li><li><a href=#c-生成節點的方式>C. 生成節點的方式</a></li><li><a href=#d-使用-linked-list-作插入>D. 使用 Linked List 作插入</a></li><li><a href=#e-使用-linked-list-作刪除>E. 使用 Linked List 作刪除</a></li><li><a href=#f-印出所有資料>F. 印出所有資料</a></li></ul></li><li><a href=#2-examples-範例>2. Examples 範例</a><ul><li><a href=#練習-11-1>練習 11-1</a></li><li><a href=#回家練習-11-2>回家練習 11-2</a></li></ul></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=單向鏈結串列-singly-linked-list>單向鏈結串列 Singly Linked List</h1><h2 id=1implementation-實作方向>1.Implementation 實作方向</h2><p>在 C/C++ 當中，我們可以用 Struct（結構）來實作 Linked List。
+在 C++ 當中，Struct 可以寫進方法，這個特性也讓我們實作上比較簡單。
+C 當中的 malloc()，在 C++ 中我們用 new 來代替。</p><h3 id=a-定義節點>A. 定義節點</h3><p>首先我們必須先定義每個 節點（Node） 到底長什麼樣子。<br>如同以下的程式碼，我們定義一個 data 節點，裡面有 int 型態的資料以及 Data 型態的指標，以及get方法。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C++ data-lang=C++><span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Data</span>{
+    <span style=color:#66d9ef>int</span> number;
+    Data <span style=color:#f92672>*</span>next;
+
+	<span style=color:#66d9ef>int</span> <span style=color:#a6e22e>getData</span>() {
+		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span><span style=color:#f92672>-&gt;</span>number;
+	}
+};
+</code></pre></div><h3 id=b-定義必要的指標>B. 定義必要的指標</h3><p>接著我們需要至少兩個指標，用來實作 Linked List 的各種功能。<br>這兩個指標一個是 head，另一個是 current。head 永遠指向第一個節點，而 current 則是作為各種功能的定位點。不過current可以實作在方法裡面，也可以宣告為全域。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C++ data-lang=C++>DATA <span style=color:#f92672>*</span>head    <span style=color:#f92672>=</span> NULL;
+</code></pre></div><h3 id=c-生成節點的方式>C. 生成節點的方式</h3><p>我們要開始來生成節點了。假如今天有一筆新的資料被加入，我們應該怎麼做呢？<br>寫一個生成 function，向系統要一塊記憶體空間，然後把指標回傳。
+不過，在C++裡面，我們可以直接用struct的建構子來搞定。</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C++ data-lang=C++><span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Data</span>{
+    <span style=color:#66d9ef>int</span> number;
+    Data <span style=color:#f92672>*</span>next;
+
+    Data(<span style=color:#66d9ef>int</span> number) {
+   	    <span style=color:#66d9ef>this</span><span style=color:#f92672>-&gt;</span>number <span style=color:#f92672>=</span> number;
+	    <span style=color:#66d9ef>this</span><span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>=</span> NULL;
+	}
+
+	<span style=color:#66d9ef>int</span> <span style=color:#a6e22e>getData</span>() {
+		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span><span style=color:#f92672>-&gt;</span>number;
+	}
+};
+</code></pre></div><h3 id=d-使用-linked-list-作插入>D. 使用 Linked List 作插入</h3><p>我們有能力生成節點之後，必須把節點塞進我們的 Linked List 裡面。</p><p>插入時的運作方式：</p><p><img src=https://fcuiecs.github.io/ccds/img/Ch11/linked-list-insert.png alt=linked-list-insert.png></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C++ data-lang=C++><span style=color:#75715e>//把 node2 塞到 node1 後面。
+</span><span style=color:#75715e></span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>insert_node</span>(Data node1, Data node2)
+{
+    node2<span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>=</span> node1<span style=color:#f92672>-&gt;</span>next;
+    node1<span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>=</span> node2;
+}
+</code></pre></div><h3 id=e-使用-linked-list-作刪除>E. 使用 Linked List 作刪除</h3><p>用 malloc 要來的記憶體空間會放在 heap 而不是 stack，所以不會隨著 function 結束釋放，
+必須要用 free() 釋放掉，否則會造成 memory leak。<br>但在 C++ 中利用 new 就不必這樣做，我們改成用 delete 將其刪除。</p><p>刪除時的運作方式：</p><p><img src=https://fcuiecs.github.io/ccds/img/Ch11/linked-list-del.png alt=linked-list-del.png></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C++ data-lang=C++><span style=color:#75715e>//刪除 n 的下一個 node
+</span><span style=color:#75715e></span><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>remove_node</span>(Data<span style=color:#f92672>*</span> n)
+{
+	<span style=color:#75715e>//宣告一指標指向 n 的下一個節點
+</span><span style=color:#75715e></span>	Data<span style=color:#f92672>*</span> temp <span style=color:#f92672>=</span> n<span style=color:#f92672>-&gt;</span>next;
+
+	<span style=color:#75715e>//將 n 指向下下一個節點
+</span><span style=color:#75715e></span>    n<span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>=</span> n<span style=color:#f92672>-&gt;</span>next<span style=color:#f92672>-&gt;</span>next;
+
+    <span style=color:#75715e>//釋放被刪除節點的記憶體空間
+</span><span style=color:#75715e></span>    <span style=color:#66d9ef>delete</span> temp;
+}
+</code></pre></div><h3 id=f-印出所有資料>F. 印出所有資料</h3><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C++ data-lang=C++><span style=color:#66d9ef>void</span> <span style=color:#a6e22e>printAll</span>() {
+	Data<span style=color:#f92672>*</span> temp <span style=color:#f92672>=</span> head;
+	cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Data :&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+	<span style=color:#66d9ef>while</span>(temp<span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>!=</span> NULL) {
+		cout <span style=color:#f92672>&lt;&lt;</span> temp<span style=color:#f92672>-&gt;</span>getData() <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;-&gt;&#34;</span> ;
+		temp <span style=color:#f92672>=</span> temp<span style=color:#f92672>-&gt;</span>next;
+	}
+	cout <span style=color:#f92672>&lt;&lt;</span> temp<span style=color:#f92672>-&gt;</span>getData() <span style=color:#f92672>&lt;&lt;</span> endl;
+}
+</code></pre></div><h2 id=2-examples-範例>2. Examples 範例</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C++ data-lang=C++><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;iostream&gt;</span><span style=color:#75715e>
+</span><span style=color:#75715e>#include</span> <span style=color:#75715e>&lt;stdlib.h&gt;</span><span style=color:#75715e>
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>using</span> <span style=color:#66d9ef>namespace</span> std;
+
+<span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Data</span>{
+    <span style=color:#66d9ef>int</span> number;
+    Data <span style=color:#f92672>*</span>next;
+
+    Data(<span style=color:#66d9ef>int</span> number) {
+   	  	<span style=color:#66d9ef>this</span><span style=color:#f92672>-&gt;</span>number <span style=color:#f92672>=</span> number;
+	    <span style=color:#66d9ef>this</span><span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>=</span> NULL;
+	}
+
+	<span style=color:#66d9ef>int</span> <span style=color:#a6e22e>getData</span>() {
+		<span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span><span style=color:#f92672>-&gt;</span>number;
+	}
+};
+
+Data <span style=color:#f92672>*</span>head    <span style=color:#f92672>=</span> NULL;
+
+<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>printAll</span>() {
+	Data<span style=color:#f92672>*</span> temp <span style=color:#f92672>=</span> head;
+	cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Data :&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+	<span style=color:#66d9ef>while</span>(temp<span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>!=</span> NULL) {
+		cout <span style=color:#f92672>&lt;&lt;</span> temp<span style=color:#f92672>-&gt;</span>getData() <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;-&gt;&#34;</span> ;
+		temp <span style=color:#f92672>=</span> temp<span style=color:#f92672>-&gt;</span>next;
+	}
+	cout <span style=color:#f92672>&lt;&lt;</span> temp<span style=color:#f92672>-&gt;</span>getData() <span style=color:#f92672>&lt;&lt;</span> endl;
+}
+
+<span style=color:#66d9ef>void</span> <span style=color:#a6e22e>createNewDataAtLast</span>(<span style=color:#66d9ef>int</span> number) {
+	Data<span style=color:#f92672>*</span> temp <span style=color:#f92672>=</span> head;
+	<span style=color:#66d9ef>if</span>(head <span style=color:#f92672>==</span> NULL) {
+		head <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Data(number);
+	} <span style=color:#66d9ef>else</span> {
+		<span style=color:#66d9ef>while</span>(temp<span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>!=</span> NULL) {
+			temp <span style=color:#f92672>=</span> temp<span style=color:#f92672>-&gt;</span>next;
+		}
+		temp<span style=color:#f92672>-&gt;</span>next <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Data(number);
+	}
+}
+
+<span style=color:#66d9ef>int</span> <span style=color:#a6e22e>main</span>(<span style=color:#66d9ef>int</span> argc, <span style=color:#66d9ef>char</span> <span style=color:#66d9ef>const</span> <span style=color:#f92672>*</span>argv[])
+{
+	<span style=color:#66d9ef>while</span>(<span style=color:#ae81ff>1</span>) {
+		<span style=color:#66d9ef>int</span> choice;
+		cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Choose the function you want :&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+		cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;1. Add data&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+		cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;2. Print All datas&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+		cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;3. Exit&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+		cin <span style=color:#f92672>&gt;&gt;</span> choice;
+
+		<span style=color:#66d9ef>switch</span>(choice) {
+			<span style=color:#66d9ef>case</span> <span style=color:#ae81ff>1</span><span style=color:#f92672>:</span>
+				<span style=color:#66d9ef>int</span> data;
+				cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Input data:&#34;</span>;
+				cin <span style=color:#f92672>&gt;&gt;</span> data;
+				createNewDataAtLast(data);
+				cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Add data successfully!&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+				<span style=color:#66d9ef>break</span>;
+			<span style=color:#66d9ef>case</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>:</span>
+				printAll();
+				<span style=color:#66d9ef>break</span>;
+			<span style=color:#66d9ef>case</span> <span style=color:#ae81ff>3</span><span style=color:#f92672>:</span>
+				exit(<span style=color:#ae81ff>0</span>);
+			<span style=color:#66d9ef>default</span><span style=color:#f92672>:</span>
+				cout <span style=color:#f92672>&lt;&lt;</span> <span style=color:#e6db74>&#34;Error!&#34;</span> <span style=color:#f92672>&lt;&lt;</span> endl;
+				<span style=color:#66d9ef>break</span>;
+		}
+		cout <span style=color:#f92672>&lt;&lt;</span> endl;
+	}
+	<span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
+}
+</code></pre></div><h3 id=練習-11-1>練習 11-1</h3><p>請設計一個 Linked List 程式，需要有建構子以及get方法，節點結構為：</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C++ data-lang=C++><span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Data</span>{
+    <span style=color:#66d9ef>int</span> number;
+    string name;
+    Data <span style=color:#f92672>*</span>next;
+};
+</code></pre></div><p>function 必須寫在 struct 裡面。<br>必須要有選單讓使用選擇功能，可以重複使用，每次需要清除畫面。<br>可以用以下功能：</p><ul><li>新增資料<ul><li>在最後面新增一筆資料</li></ul></li><li>刪除<ul><li>輸入要刪除的位置，執行刪除</li></ul></li><li>印出所有資料</li></ul><h3 id=回家練習-11-2>回家練習 11-2</h3><p>同上，但功能有：</p><ul><li>新增資料<ul><li>在最後面新增一筆資料</li></ul></li><li>插入資料<ul><li>將一筆資料插入於特定位置</li></ul></li><li>刪除<ul><li>輸入要刪除的位置，執行刪除</li></ul></li><li>修改<ul><li>輸入要修改的位置，以及新的 number 和 name</li></ul></li><li>查詢<ul><li>輸入位置，印出數值以及名字</li></ul></li><li>排序資料（按照 number）<ul><li>重新排序整個 List</li></ul></li><li>反轉整個 List</li><li>印出所有資料<ul><li>一筆一筆印出 number 和 name</li></ul></li><li>刪除所有資料</li></ul></article><footer class=book-footer><div class="flex justify-between"><div><a class="flex align-center" href=https://github.com/FCUIECS/CCDS/commit/b8a4a3482129f425d4f388335a4ec697f9d367be title="Vongola | Apr 10, 2020" target=_blank rel=noopener><img src=https://fcuiecs.github.io/ccds/svg/calendar.svg class=book-icon alt=Calendar>
+<span>Apr 10, 2020</span></a></div></div></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><nav id=TableOfContents><ul><li><a href=#單向鏈結串列-singly-linked-list>單向鏈結串列 Singly Linked List</a><ul><li><a href=#1implementation-實作方向>1.Implementation 實作方向</a><ul><li><a href=#a-定義節點>A. 定義節點</a></li><li><a href=#b-定義必要的指標>B. 定義必要的指標</a></li><li><a href=#c-生成節點的方式>C. 生成節點的方式</a></li><li><a href=#d-使用-linked-list-作插入>D. 使用 Linked List 作插入</a></li><li><a href=#e-使用-linked-list-作刪除>E. 使用 Linked List 作刪除</a></li><li><a href=#f-印出所有資料>F. 印出所有資料</a></li></ul></li><li><a href=#2-examples-範例>2. Examples 範例</a><ul><li><a href=#練習-11-1>練習 11-1</a></li><li><a href=#回家練習-11-2>回家練習 11-2</a></li></ul></li></ul></li></ul></nav></aside></main></body></html>
