@@ -1,0 +1,13 @@
+{{ define "main" }}
+<main aria-role="main">
+    <header class="homepage-header">
+        <h1>{{.Title}}</h1>
+        {{ with .Params.subtitle }}
+        <span class="subtitle">{{.}}</span>
+        {{ end }}
+    </header>
+    <div class="homepage-content">
+        請點選左方的選單開始！
+    </div>
+</main>
+{{ end }}

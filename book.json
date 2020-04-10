@@ -1,7 +1,0 @@
-{
-    "plugins": [
-        "-fancybox",
-        "ace"
-    ],
-    "pluginsConfig": {}
-}
