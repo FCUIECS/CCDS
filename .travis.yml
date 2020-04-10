@@ -1,0 +1,22 @@
+dist: bionic
+language: python
+python: 3.7
+
+install:
+  - curl -O $(curl https://api.github.com/repos/gohugoio/hugo/releases/latest | sed -r -n '/browser_download_url/{/Linux-64bit.deb/{s@[^:]*:[[:space:]]*"([^"]*)".*@\1@g;p;q}}')
+  - sudo dpkg -i hugo*.deb
+  - hugo version
+
+script:
+  - hugo
+
+# 构建完成后会自动更新Github Pages
+deploy:
+  provider: pages
+  skip-cleanup: true
+  local-dir: public
+  target-branch: gh-pages
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
