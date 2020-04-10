@@ -6,6 +6,7 @@ python: 3.7
 install:
   - curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep  browser_download_url | grep Linux-64bit.deb | grep extended | cut -d '"' -f 4 | wget -i -
   - sudo dpkg -i hugo*.deb
+  - rm hugo*.deb
   - hugo version
 
 script:
@@ -13,7 +14,9 @@ script:
 
 deploy:
   strategy: git
-  provider: pages
+  provider: pages:git
+  edge: true
+  cleanup: false
   local_dir: public
   target_branch: gh-pages
   token: $GITHUB_TOKEN
