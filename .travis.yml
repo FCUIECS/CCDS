@@ -1,11 +1,11 @@
-root: linux
+os: linux
 dist: bionic
 language: python
 python: 3.7
 
 install:
-  - TARGET=$(curl --silent https://api.github.com/repos/gohugoio/hugo/releases/latest)
-  - TARGET=$(echo $TARGET | grep -o 'https\:\/\/github\.com\/gohugoio\/hugo\/releases\/download\/[v\.\d]+\/hugo\_extended_[v\.\d]+_Linux\-64bit\.deb')
+  - curl --silent -o 'latest_hugo' https://api.github.com/repos/gohugoio/hugo/releases/latest
+  - TARGET=$(cat 'latest_hugo' | grep -o 'https\:\/\/github\.com\/gohugoio\/hugo\/releases\/download\/[v\.\d]+\/hugo\_extended_[v\.\d]+_Linux\-64bit\.deb')
   - curl -O $TARGET
   - sudo dpkg -i hugo*.deb
   - hugo version
@@ -13,11 +13,9 @@ install:
 script:
   - hugo --minify -e production
 
-# 构建完成后会自动更新Github Pages
 deploy:
   strategy: git
   provider: pages
-  skip_cleanup: true
   local_dir: public
   target_branch: gh-pages
   token: $GITHUB_TOKEN
